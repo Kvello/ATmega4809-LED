@@ -23,7 +23,7 @@ extern "C" {
 #define LED_PORT	PORTF
 		
 //#define LED_PIN		9
-#define LED_PIN			3
+#define LED_PIN			2
 //------------------------------------
 #else
 //if on older Atmel AVR chips
@@ -31,7 +31,7 @@ extern "C" {
 //#define LED_STRIP_PORT PORTB
 #define LED_STRIP_PORT PORTF		//test with curiosity nano
 #define LED_STRIP_DDR	DDRF
-#define LED_STRIP_PIN 3				//test with curiosity nano 
+#define LED_STRIP_PIN 2				//test with curiosity nano 
 //#define LED_STRIP_DDR  DDRB
 //#define LED_STRIP_PIN  3 //testpin
 //#define LED_STRIP_PIN  8 //faktisk pin
