@@ -1,0 +1,1772 @@
+
+LED.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000008  00802800  00000ca2  00000d36  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000ca2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000005c  00802808  00802808  00000d3e  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000d3e  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000d70  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000d8  00000000  00000000  00000db0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00003a5b  00000000  00000000  00000e88  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00002917  00000000  00000000  000048e3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000009d3  00000000  00000000  000071fa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000324  00000000  00000000  00007bd0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000182c  00000000  00000000  00007ef4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000ee9  00000000  00000000  00009720  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000a8  00000000  00000000  0000a609  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__ctors_end>
+   4:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+   8:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+   c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  10:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  14:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  18:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  1c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  20:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  24:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  28:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  2c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  30:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  34:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  38:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  3c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  40:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  44:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  48:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  4c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  50:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  54:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  58:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  5c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  60:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  64:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  68:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  6c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  70:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  74:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  78:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  7c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  80:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  84:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  88:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  8c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  90:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  94:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  98:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+  9c:	0c 94 6d 00 	jmp	0xda	; 0xda <__bad_interrupt>
+
+000000a0 <__ctors_end>:
+  a0:	11 24       	eor	r1, r1
+  a2:	1f be       	out	0x3f, r1	; 63
+  a4:	cf ef       	ldi	r28, 0xFF	; 255
+  a6:	cd bf       	out	0x3d, r28	; 61
+  a8:	df e3       	ldi	r29, 0x3F	; 63
+  aa:	de bf       	out	0x3e, r29	; 62
+
+000000ac <__do_copy_data>:
+  ac:	18 e2       	ldi	r17, 0x28	; 40
+  ae:	a0 e0       	ldi	r26, 0x00	; 0
+  b0:	b8 e2       	ldi	r27, 0x28	; 40
+  b2:	e2 ea       	ldi	r30, 0xA2	; 162
+  b4:	fc e0       	ldi	r31, 0x0C	; 12
+  b6:	02 c0       	rjmp	.+4      	; 0xbc <__do_copy_data+0x10>
+  b8:	05 90       	lpm	r0, Z+
+  ba:	0d 92       	st	X+, r0
+  bc:	a8 30       	cpi	r26, 0x08	; 8
+  be:	b1 07       	cpc	r27, r17
+  c0:	d9 f7       	brne	.-10     	; 0xb8 <__do_copy_data+0xc>
+
+000000c2 <__do_clear_bss>:
+  c2:	28 e2       	ldi	r18, 0x28	; 40
+  c4:	a8 e0       	ldi	r26, 0x08	; 8
+  c6:	b8 e2       	ldi	r27, 0x28	; 40
+  c8:	01 c0       	rjmp	.+2      	; 0xcc <.do_clear_bss_start>
+
+000000ca <.do_clear_bss_loop>:
+  ca:	1d 92       	st	X+, r1
+
+000000cc <.do_clear_bss_start>:
+  cc:	a4 36       	cpi	r26, 0x64	; 100
+  ce:	b2 07       	cpc	r27, r18
+  d0:	e1 f7       	brne	.-8      	; 0xca <.do_clear_bss_loop>
+  d2:	0e 94 8f 03 	call	0x71e	; 0x71e <main>
+  d6:	0c 94 4f 06 	jmp	0xc9e	; 0xc9e <_exit>
+
+000000da <__bad_interrupt>:
+  da:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000de <_ZN3Led8setColorEhhhh>:
+int Led::getGreen(uint8_t i) {
+	return ledstrip[i].green;
+}
+int Led::getBlue(uint8_t i) {
+	return ledstrip[i].blue;
+}
+  de:	ef 92       	push	r14
+  e0:	ff 92       	push	r15
+  e2:	0f 93       	push	r16
+  e4:	cf 93       	push	r28
+  e6:	df 93       	push	r29
+  e8:	7c 01       	movw	r14, r24
+  ea:	36 2f       	mov	r19, r22
+  ec:	c0 91 04 28 	lds	r28, 0x2804	; 0x802804 <intensity>
+  f0:	d0 e0       	ldi	r29, 0x00	; 0
+  f2:	4c 9f       	mul	r20, r28
+  f4:	c0 01       	movw	r24, r0
+  f6:	4d 9f       	mul	r20, r29
+  f8:	90 0d       	add	r25, r0
+  fa:	11 24       	eor	r1, r1
+  fc:	e4 e6       	ldi	r30, 0x64	; 100
+  fe:	f0 e0       	ldi	r31, 0x00	; 0
+ 100:	bf 01       	movw	r22, r30
+ 102:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 106:	46 2f       	mov	r20, r22
+ 108:	2c 9f       	mul	r18, r28
+ 10a:	c0 01       	movw	r24, r0
+ 10c:	2d 9f       	mul	r18, r29
+ 10e:	90 0d       	add	r25, r0
+ 110:	11 24       	eor	r1, r1
+ 112:	bf 01       	movw	r22, r30
+ 114:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 118:	26 2f       	mov	r18, r22
+ 11a:	0c 9f       	mul	r16, r28
+ 11c:	c0 01       	movw	r24, r0
+ 11e:	0d 9f       	mul	r16, r29
+ 120:	90 0d       	add	r25, r0
+ 122:	11 24       	eor	r1, r1
+ 124:	bf 01       	movw	r22, r30
+ 126:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 12a:	83 2f       	mov	r24, r19
+ 12c:	90 e0       	ldi	r25, 0x00	; 0
+ 12e:	fc 01       	movw	r30, r24
+ 130:	ee 0f       	add	r30, r30
+ 132:	ff 1f       	adc	r31, r31
+ 134:	8e 0f       	add	r24, r30
+ 136:	9f 1f       	adc	r25, r31
+ 138:	f7 01       	movw	r30, r14
+ 13a:	e8 0f       	add	r30, r24
+ 13c:	f9 1f       	adc	r31, r25
+ 13e:	40 83       	st	Z, r20
+ 140:	21 83       	std	Z+1, r18	; 0x01
+ 142:	62 83       	std	Z+2, r22	; 0x02
+ 144:	df 91       	pop	r29
+ 146:	cf 91       	pop	r28
+ 148:	0f 91       	pop	r16
+ 14a:	ff 90       	pop	r15
+ 14c:	ef 90       	pop	r14
+ 14e:	08 95       	ret
+
+00000150 <_ZN3Led16setRelativeColorEhiii>:
+ 150:	8f 92       	push	r8
+ 152:	9f 92       	push	r9
+ 154:	af 92       	push	r10
+ 156:	bf 92       	push	r11
+ 158:	cf 92       	push	r12
+ 15a:	df 92       	push	r13
+ 15c:	ef 92       	push	r14
+ 15e:	ff 92       	push	r15
+ 160:	0f 93       	push	r16
+ 162:	1f 93       	push	r17
+ 164:	cf 93       	push	r28
+ 166:	df 93       	push	r29
+ 168:	5c 01       	movw	r10, r24
+ 16a:	e6 2f       	mov	r30, r22
+ 16c:	f0 e0       	ldi	r31, 0x00	; 0
+ 16e:	ef 01       	movw	r28, r30
+ 170:	cc 0f       	add	r28, r28
+ 172:	dd 1f       	adc	r29, r29
+ 174:	ce 0f       	add	r28, r30
+ 176:	df 1f       	adc	r29, r31
+ 178:	c8 0f       	add	r28, r24
+ 17a:	d9 1f       	adc	r29, r25
+ 17c:	e0 90 04 28 	lds	r14, 0x2804	; 0x802804 <intensity>
+ 180:	f1 2c       	mov	r15, r1
+ 182:	e4 9e       	mul	r14, r20
+ 184:	c0 01       	movw	r24, r0
+ 186:	e5 9e       	mul	r14, r21
+ 188:	90 0d       	add	r25, r0
+ 18a:	f4 9e       	mul	r15, r20
+ 18c:	90 0d       	add	r25, r0
+ 18e:	11 24       	eor	r1, r1
+ 190:	0f 2e       	mov	r0, r31
+ 192:	f4 e6       	ldi	r31, 0x64	; 100
+ 194:	8f 2e       	mov	r8, r31
+ 196:	91 2c       	mov	r9, r1
+ 198:	f0 2d       	mov	r31, r0
+ 19a:	b4 01       	movw	r22, r8
+ 19c:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 1a0:	6b 01       	movw	r12, r22
+ 1a2:	48 81       	ld	r20, Y
+ 1a4:	e2 9e       	mul	r14, r18
+ 1a6:	c0 01       	movw	r24, r0
+ 1a8:	e3 9e       	mul	r14, r19
+ 1aa:	90 0d       	add	r25, r0
+ 1ac:	f2 9e       	mul	r15, r18
+ 1ae:	90 0d       	add	r25, r0
+ 1b0:	11 24       	eor	r1, r1
+ 1b2:	b4 01       	movw	r22, r8
+ 1b4:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 1b8:	89 81       	ldd	r24, Y+1	; 0x01
+ 1ba:	9b 01       	movw	r18, r22
+ 1bc:	28 0f       	add	r18, r24
+ 1be:	31 1d       	adc	r19, r1
+ 1c0:	e0 9e       	mul	r14, r16
+ 1c2:	c0 01       	movw	r24, r0
+ 1c4:	e1 9e       	mul	r14, r17
+ 1c6:	90 0d       	add	r25, r0
+ 1c8:	f0 9e       	mul	r15, r16
+ 1ca:	90 0d       	add	r25, r0
+ 1cc:	11 24       	eor	r1, r1
+ 1ce:	b4 01       	movw	r22, r8
+ 1d0:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 1d4:	8a 81       	ldd	r24, Y+2	; 0x02
+ 1d6:	68 0f       	add	r22, r24
+ 1d8:	71 1d       	adc	r23, r1
+ 1da:	c4 0e       	add	r12, r20
+ 1dc:	d1 1c       	adc	r13, r1
+ 1de:	dd 20       	and	r13, r13
+ 1e0:	14 f4       	brge	.+4      	; 0x1e6 <_ZN3Led16setRelativeColorEhiii+0x96>
+ 1e2:	c1 2c       	mov	r12, r1
+ 1e4:	d1 2c       	mov	r13, r1
+ 1e6:	c8 82       	st	Y, r12
+ 1e8:	df 01       	movw	r26, r30
+ 1ea:	aa 0f       	add	r26, r26
+ 1ec:	bb 1f       	adc	r27, r27
+ 1ee:	ae 0f       	add	r26, r30
+ 1f0:	bf 1f       	adc	r27, r31
+ 1f2:	aa 0d       	add	r26, r10
+ 1f4:	bb 1d       	adc	r27, r11
+ 1f6:	33 23       	and	r19, r19
+ 1f8:	14 f4       	brge	.+4      	; 0x1fe <_ZN3Led16setRelativeColorEhiii+0xae>
+ 1fa:	20 e0       	ldi	r18, 0x00	; 0
+ 1fc:	30 e0       	ldi	r19, 0x00	; 0
+ 1fe:	11 96       	adiw	r26, 0x01	; 1
+ 200:	2c 93       	st	X, r18
+ 202:	cf 01       	movw	r24, r30
+ 204:	88 0f       	add	r24, r24
+ 206:	99 1f       	adc	r25, r25
+ 208:	e8 0f       	add	r30, r24
+ 20a:	f9 1f       	adc	r31, r25
+ 20c:	ea 0d       	add	r30, r10
+ 20e:	fb 1d       	adc	r31, r11
+ 210:	77 23       	and	r23, r23
+ 212:	14 f4       	brge	.+4      	; 0x218 <_ZN3Led16setRelativeColorEhiii+0xc8>
+ 214:	60 e0       	ldi	r22, 0x00	; 0
+ 216:	70 e0       	ldi	r23, 0x00	; 0
+ 218:	62 83       	std	Z+2, r22	; 0x02
+ 21a:	df 91       	pop	r29
+ 21c:	cf 91       	pop	r28
+ 21e:	1f 91       	pop	r17
+ 220:	0f 91       	pop	r16
+ 222:	ff 90       	pop	r15
+ 224:	ef 90       	pop	r14
+ 226:	df 90       	pop	r13
+ 228:	cf 90       	pop	r12
+ 22a:	bf 90       	pop	r11
+ 22c:	af 90       	pop	r10
+ 22e:	9f 90       	pop	r9
+ 230:	8f 90       	pop	r8
+ 232:	08 95       	ret
+
+00000234 <_ZN3Led7uppdateEv>:
+
+void Led::uppdate(void) {
+	update_led_strip(ledstrip, NUMBER_OF_LEDS);
+ 234:	6e e1       	ldi	r22, 0x1E	; 30
+ 236:	70 e0       	ldi	r23, 0x00	; 0
+ 238:	0e 94 4d 03 	call	0x69a	; 0x69a <update_led_strip>
+ 23c:	08 95       	ret
+
+0000023e <_Z13testAnimationv>:
+}
+
+void testAnimation() {
+ 23e:	cf 92       	push	r12
+ 240:	df 92       	push	r13
+ 242:	ff 92       	push	r15
+ 244:	0f 93       	push	r16
+ 246:	1f 93       	push	r17
+ 248:	cf 93       	push	r28
+ 24a:	df 93       	push	r29
+	ledstripe.setColor(rand() % NUMBER_OF_LEDS,0, 200, 50);
+ 24c:	0e 94 dc 05 	call	0xbb8	; 0xbb8 <rand>
+ 250:	6e e1       	ldi	r22, 0x1E	; 30
+ 252:	70 e0       	ldi	r23, 0x00	; 0
+ 254:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 258:	02 e3       	ldi	r16, 0x32	; 50
+ 25a:	28 ec       	ldi	r18, 0xC8	; 200
+ 25c:	40 e0       	ldi	r20, 0x00	; 0
+ 25e:	68 2f       	mov	r22, r24
+ 260:	8a e0       	ldi	r24, 0x0A	; 10
+ 262:	98 e2       	ldi	r25, 0x28	; 40
+ 264:	0e 94 6f 00 	call	0xde	; 0xde <_ZN3Led8setColorEhhhh>
+ 268:	ca e0       	ldi	r28, 0x0A	; 10
+ 26a:	d8 e2       	ldi	r29, 0x28	; 40
+	for (uint8_t i = 0; i < NUMBER_OF_LEDS; i++)
+ 26c:	f1 2c       	mov	r15, r1
+ 26e:	6e 01       	movw	r12, r28
+	{
+		if (ledstripe.getGreen(i)> 10) {
+ 270:	89 81       	ldd	r24, Y+1	; 0x01
+ 272:	90 e0       	ldi	r25, 0x00	; 0
+ 274:	0b 97       	sbiw	r24, 0x0b	; 11
+ 276:	5c f0       	brlt	.+22     	; 0x28e <_Z13testAnimationv+0x50>
+			ledstripe.setRelativeColor(i,0,-10,0);
+ 278:	00 e0       	ldi	r16, 0x00	; 0
+ 27a:	10 e0       	ldi	r17, 0x00	; 0
+ 27c:	26 ef       	ldi	r18, 0xF6	; 246
+ 27e:	3f ef       	ldi	r19, 0xFF	; 255
+ 280:	40 e0       	ldi	r20, 0x00	; 0
+ 282:	50 e0       	ldi	r21, 0x00	; 0
+ 284:	6f 2d       	mov	r22, r15
+ 286:	8a e0       	ldi	r24, 0x0A	; 10
+ 288:	98 e2       	ldi	r25, 0x28	; 40
+ 28a:	0e 94 a8 00 	call	0x150	; 0x150 <_ZN3Led16setRelativeColorEhiii>
+		}
+		if (ledstripe.getRed(i) > 5) {
+ 28e:	f6 01       	movw	r30, r12
+ 290:	80 81       	ld	r24, Z
+ 292:	90 e0       	ldi	r25, 0x00	; 0
+ 294:	06 97       	sbiw	r24, 0x06	; 6
+ 296:	5c f0       	brlt	.+22     	; 0x2ae <_Z13testAnimationv+0x70>
+			ledstripe.setRelativeColor(i,0,-5,0);
+ 298:	00 e0       	ldi	r16, 0x00	; 0
+ 29a:	10 e0       	ldi	r17, 0x00	; 0
+ 29c:	2b ef       	ldi	r18, 0xFB	; 251
+ 29e:	3f ef       	ldi	r19, 0xFF	; 255
+ 2a0:	40 e0       	ldi	r20, 0x00	; 0
+ 2a2:	50 e0       	ldi	r21, 0x00	; 0
+ 2a4:	6f 2d       	mov	r22, r15
+ 2a6:	8a e0       	ldi	r24, 0x0A	; 10
+ 2a8:	98 e2       	ldi	r25, 0x28	; 40
+ 2aa:	0e 94 a8 00 	call	0x150	; 0x150 <_ZN3Led16setRelativeColorEhiii>
+	update_led_strip(ledstrip, NUMBER_OF_LEDS);
+}
+
+void testAnimation() {
+	ledstripe.setColor(rand() % NUMBER_OF_LEDS,0, 200, 50);
+	for (uint8_t i = 0; i < NUMBER_OF_LEDS; i++)
+ 2ae:	f3 94       	inc	r15
+ 2b0:	23 96       	adiw	r28, 0x03	; 3
+ 2b2:	fe e1       	ldi	r31, 0x1E	; 30
+ 2b4:	ff 12       	cpse	r15, r31
+ 2b6:	db cf       	rjmp	.-74     	; 0x26e <_Z13testAnimationv+0x30>
+		if (ledstripe.getRed(i) > 5) {
+			ledstripe.setRelativeColor(i,0,-5,0);
+		}
+	}
+	
+	if (rand()%5 == 1) {
+ 2b8:	0e 94 dc 05 	call	0xbb8	; 0xbb8 <rand>
+ 2bc:	65 e0       	ldi	r22, 0x05	; 5
+ 2be:	70 e0       	ldi	r23, 0x00	; 0
+ 2c0:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 2c4:	01 97       	sbiw	r24, 0x01	; 1
+ 2c6:	71 f4       	brne	.+28     	; 0x2e4 <_Z13testAnimationv+0xa6>
+		ledstripe.setColor(rand()%NUMBER_OF_LEDS,200,100,100);
+ 2c8:	0e 94 dc 05 	call	0xbb8	; 0xbb8 <rand>
+ 2cc:	6e e1       	ldi	r22, 0x1E	; 30
+ 2ce:	70 e0       	ldi	r23, 0x00	; 0
+ 2d0:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 2d4:	04 e6       	ldi	r16, 0x64	; 100
+ 2d6:	24 e6       	ldi	r18, 0x64	; 100
+ 2d8:	48 ec       	ldi	r20, 0xC8	; 200
+ 2da:	68 2f       	mov	r22, r24
+ 2dc:	8a e0       	ldi	r24, 0x0A	; 10
+ 2de:	98 e2       	ldi	r25, 0x28	; 40
+ 2e0:	0e 94 6f 00 	call	0xde	; 0xde <_ZN3Led8setColorEhhhh>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 2e4:	8f e4       	ldi	r24, 0x4F	; 79
+ 2e6:	93 ec       	ldi	r25, 0xC3	; 195
+ 2e8:	01 97       	sbiw	r24, 0x01	; 1
+ 2ea:	f1 f7       	brne	.-4      	; 0x2e8 <_Z13testAnimationv+0xaa>
+ 2ec:	00 c0       	rjmp	.+0      	; 0x2ee <_Z13testAnimationv+0xb0>
+ 2ee:	00 00       	nop
+	}
+	_delay_ms(200);
+}
+ 2f0:	df 91       	pop	r29
+ 2f2:	cf 91       	pop	r28
+ 2f4:	1f 91       	pop	r17
+ 2f6:	0f 91       	pop	r16
+ 2f8:	ff 90       	pop	r15
+ 2fa:	df 90       	pop	r13
+ 2fc:	cf 90       	pop	r12
+ 2fe:	08 95       	ret
+
+00000300 <_Z18animationBlueBlinkv>:
+
+
+void animationBlueBlink() { //every second led turns on and off, and the other ones are the opposite
+ 300:	cf 92       	push	r12
+ 302:	df 92       	push	r13
+ 304:	ef 92       	push	r14
+ 306:	ff 92       	push	r15
+ 308:	0f 93       	push	r16
+ 30a:	cf 93       	push	r28
+ 30c:	df 93       	push	r29
+	index = index%2;
+ 30e:	80 91 08 28 	lds	r24, 0x2808	; 0x802808 <__data_end>
+ 312:	90 91 09 28 	lds	r25, 0x2809	; 0x802809 <__data_end+0x1>
+ 316:	81 70       	andi	r24, 0x01	; 1
+ 318:	90 78       	andi	r25, 0x80	; 128
+ 31a:	99 23       	and	r25, r25
+ 31c:	24 f4       	brge	.+8      	; 0x326 <_Z18animationBlueBlinkv+0x26>
+ 31e:	01 97       	sbiw	r24, 0x01	; 1
+ 320:	8e 6f       	ori	r24, 0xFE	; 254
+ 322:	9f 6f       	ori	r25, 0xFF	; 255
+ 324:	01 96       	adiw	r24, 0x01	; 1
+ 326:	80 93 08 28 	sts	0x2808, r24	; 0x802808 <__data_end>
+ 32a:	90 93 09 28 	sts	0x2809, r25	; 0x802809 <__data_end+0x1>
+	for(uint8_t i=0; i<NUMBER_OF_LEDS; i+=2)
+ 32e:	c0 e0       	ldi	r28, 0x00	; 0
+	{
+		ledstripe.setColor(i, 160*index, 255*index, 128*index);
+ 330:	0f 2e       	mov	r0, r31
+ 332:	f8 e0       	ldi	r31, 0x08	; 8
+ 334:	cf 2e       	mov	r12, r31
+ 336:	f8 e2       	ldi	r31, 0x28	; 40
+ 338:	df 2e       	mov	r13, r31
+ 33a:	f0 2d       	mov	r31, r0
+ 33c:	d0 ea       	ldi	r29, 0xA0	; 160
+		ledstripe.setColor(i+1, 160*(1-index), 255*(1-index), 128*(1-index));
+ 33e:	ee 24       	eor	r14, r14
+ 340:	e3 94       	inc	r14
+ 342:	f1 2c       	mov	r15, r1
+
+void animationBlueBlink() { //every second led turns on and off, and the other ones are the opposite
+	index = index%2;
+	for(uint8_t i=0; i<NUMBER_OF_LEDS; i+=2)
+	{
+		ledstripe.setColor(i, 160*index, 255*index, 128*index);
+ 344:	f6 01       	movw	r30, r12
+ 346:	40 81       	ld	r20, Z
+ 348:	04 2f       	mov	r16, r20
+ 34a:	07 95       	ror	r16
+ 34c:	00 27       	eor	r16, r16
+ 34e:	07 95       	ror	r16
+ 350:	24 2f       	mov	r18, r20
+ 352:	21 95       	neg	r18
+ 354:	4d 9f       	mul	r20, r29
+ 356:	40 2d       	mov	r20, r0
+ 358:	11 24       	eor	r1, r1
+ 35a:	6c 2f       	mov	r22, r28
+ 35c:	8a e0       	ldi	r24, 0x0A	; 10
+ 35e:	98 e2       	ldi	r25, 0x28	; 40
+ 360:	0e 94 6f 00 	call	0xde	; 0xde <_ZN3Led8setColorEhhhh>
+		ledstripe.setColor(i+1, 160*(1-index), 255*(1-index), 128*(1-index));
+ 364:	80 91 08 28 	lds	r24, 0x2808	; 0x802808 <__data_end>
+ 368:	90 91 09 28 	lds	r25, 0x2809	; 0x802809 <__data_end+0x1>
+ 36c:	a7 01       	movw	r20, r14
+ 36e:	48 1b       	sub	r20, r24
+ 370:	59 0b       	sbc	r21, r25
+ 372:	04 2f       	mov	r16, r20
+ 374:	07 95       	ror	r16
+ 376:	00 27       	eor	r16, r16
+ 378:	07 95       	ror	r16
+ 37a:	24 2f       	mov	r18, r20
+ 37c:	21 95       	neg	r18
+ 37e:	d4 9f       	mul	r29, r20
+ 380:	40 2d       	mov	r20, r0
+ 382:	11 24       	eor	r1, r1
+ 384:	61 e0       	ldi	r22, 0x01	; 1
+ 386:	6c 0f       	add	r22, r28
+ 388:	8a e0       	ldi	r24, 0x0A	; 10
+ 38a:	98 e2       	ldi	r25, 0x28	; 40
+ 38c:	0e 94 6f 00 	call	0xde	; 0xde <_ZN3Led8setColorEhhhh>
+}
+
+
+void animationBlueBlink() { //every second led turns on and off, and the other ones are the opposite
+	index = index%2;
+	for(uint8_t i=0; i<NUMBER_OF_LEDS; i+=2)
+ 390:	ce 5f       	subi	r28, 0xFE	; 254
+ 392:	ce 31       	cpi	r28, 0x1E	; 30
+ 394:	b9 f6       	brne	.-82     	; 0x344 <_Z18animationBlueBlinkv+0x44>
+ 396:	ff e7       	ldi	r31, 0x7F	; 127
+ 398:	24 e8       	ldi	r18, 0x84	; 132
+ 39a:	8e e1       	ldi	r24, 0x1E	; 30
+ 39c:	f1 50       	subi	r31, 0x01	; 1
+ 39e:	20 40       	sbci	r18, 0x00	; 0
+ 3a0:	80 40       	sbci	r24, 0x00	; 0
+ 3a2:	e1 f7       	brne	.-8      	; 0x39c <_Z18animationBlueBlinkv+0x9c>
+ 3a4:	00 c0       	rjmp	.+0      	; 0x3a6 <_Z18animationBlueBlinkv+0xa6>
+ 3a6:	00 00       	nop
+	{
+		ledstripe.setColor(i, 160*index, 255*index, 128*index);
+		ledstripe.setColor(i+1, 160*(1-index), 255*(1-index), 128*(1-index));
+	}
+	_delay_ms(10000);
+}
+ 3a8:	df 91       	pop	r29
+ 3aa:	cf 91       	pop	r28
+ 3ac:	0f 91       	pop	r16
+ 3ae:	ff 90       	pop	r15
+ 3b0:	ef 90       	pop	r14
+ 3b2:	df 90       	pop	r13
+ 3b4:	cf 90       	pop	r12
+ 3b6:	08 95       	ret
+
+000003b8 <_Z20animationPulsingBluev>:
+
+void animationPulsingBlue() { //animation is pulsing blue
+ 3b8:	ef 92       	push	r14
+ 3ba:	ff 92       	push	r15
+ 3bc:	0f 93       	push	r16
+ 3be:	cf 93       	push	r28
+ 3c0:	df 93       	push	r29
+	index = index%NUMBER_OF_LEDS;
+ 3c2:	80 91 08 28 	lds	r24, 0x2808	; 0x802808 <__data_end>
+ 3c6:	90 91 09 28 	lds	r25, 0x2809	; 0x802809 <__data_end+0x1>
+ 3ca:	6e e1       	ldi	r22, 0x1E	; 30
+ 3cc:	70 e0       	ldi	r23, 0x00	; 0
+ 3ce:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 3d2:	80 93 08 28 	sts	0x2808, r24	; 0x802808 <__data_end>
+ 3d6:	90 93 09 28 	sts	0x2809, r25	; 0x802809 <__data_end+0x1>
+ 3da:	c0 e0       	ldi	r28, 0x00	; 0
+ 3dc:	d0 e0       	ldi	r29, 0x00	; 0
+	for(uint8_t i=0; i<NUMBER_OF_LEDS; i++)
+	{
+		uint8_t a = (i+index)%NUMBER_OF_LEDS;
+		ledstripe.setColor(i, 0, 0, static_cast<uint8_t>(255.0*a/NUMBER_OF_LEDS));
+ 3de:	0f 2e       	mov	r0, r31
+ 3e0:	fe e1       	ldi	r31, 0x1E	; 30
+ 3e2:	ef 2e       	mov	r14, r31
+ 3e4:	f1 2c       	mov	r15, r1
+ 3e6:	f0 2d       	mov	r31, r0
+ 3e8:	80 91 08 28 	lds	r24, 0x2808	; 0x802808 <__data_end>
+ 3ec:	90 91 09 28 	lds	r25, 0x2809	; 0x802809 <__data_end+0x1>
+ 3f0:	8c 0f       	add	r24, r28
+ 3f2:	9d 1f       	adc	r25, r29
+ 3f4:	b7 01       	movw	r22, r14
+ 3f6:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 3fa:	bc 01       	movw	r22, r24
+ 3fc:	77 27       	eor	r23, r23
+ 3fe:	07 2e       	mov	r0, r23
+ 400:	00 0c       	add	r0, r0
+ 402:	88 0b       	sbc	r24, r24
+ 404:	99 0b       	sbc	r25, r25
+ 406:	0e 94 6f 04 	call	0x8de	; 0x8de <__floatsisf>
+ 40a:	20 e0       	ldi	r18, 0x00	; 0
+ 40c:	30 e0       	ldi	r19, 0x00	; 0
+ 40e:	4f e7       	ldi	r20, 0x7F	; 127
+ 410:	53 e4       	ldi	r21, 0x43	; 67
+ 412:	0e 94 fb 04 	call	0x9f6	; 0x9f6 <__mulsf3>
+ 416:	20 e0       	ldi	r18, 0x00	; 0
+ 418:	30 e0       	ldi	r19, 0x00	; 0
+ 41a:	40 ef       	ldi	r20, 0xF0	; 240
+ 41c:	51 e4       	ldi	r21, 0x41	; 65
+ 41e:	0e 94 cc 03 	call	0x798	; 0x798 <__divsf3>
+ 422:	0e 94 3e 04 	call	0x87c	; 0x87c <__fixunssfsi>
+ 426:	06 2f       	mov	r16, r22
+ 428:	20 e0       	ldi	r18, 0x00	; 0
+ 42a:	40 e0       	ldi	r20, 0x00	; 0
+ 42c:	6c 2f       	mov	r22, r28
+ 42e:	8a e0       	ldi	r24, 0x0A	; 10
+ 430:	98 e2       	ldi	r25, 0x28	; 40
+ 432:	0e 94 6f 00 	call	0xde	; 0xde <_ZN3Led8setColorEhhhh>
+ 436:	21 96       	adiw	r28, 0x01	; 1
+	_delay_ms(10000);
+}
+
+void animationPulsingBlue() { //animation is pulsing blue
+	index = index%NUMBER_OF_LEDS;
+	for(uint8_t i=0; i<NUMBER_OF_LEDS; i++)
+ 438:	ce 31       	cpi	r28, 0x1E	; 30
+ 43a:	d1 05       	cpc	r29, r1
+ 43c:	a9 f6       	brne	.-86     	; 0x3e8 <_Z20animationPulsingBluev+0x30>
+ 43e:	8f e4       	ldi	r24, 0x4F	; 79
+ 440:	93 ec       	ldi	r25, 0xC3	; 195
+ 442:	01 97       	sbiw	r24, 0x01	; 1
+ 444:	f1 f7       	brne	.-4      	; 0x442 <__LOCK_REGION_LENGTH__+0x42>
+ 446:	00 c0       	rjmp	.+0      	; 0x448 <__LOCK_REGION_LENGTH__+0x48>
+ 448:	00 00       	nop
+	{
+		uint8_t a = (i+index)%NUMBER_OF_LEDS;
+		ledstripe.setColor(i, 0, 0, static_cast<uint8_t>(255.0*a/NUMBER_OF_LEDS));
+	}
+	_delay_ms(200);
+}
+ 44a:	df 91       	pop	r29
+ 44c:	cf 91       	pop	r28
+ 44e:	0f 91       	pop	r16
+ 450:	ff 90       	pop	r15
+ 452:	ef 90       	pop	r14
+ 454:	08 95       	ret
+
+00000456 <_Z16animationRainbowv>:
+
+void animationRainbow() { //rainbow
+ 456:	cf 92       	push	r12
+ 458:	df 92       	push	r13
+ 45a:	ef 92       	push	r14
+ 45c:	ff 92       	push	r15
+ 45e:	0f 93       	push	r16
+ 460:	1f 93       	push	r17
+ 462:	cf 93       	push	r28
+ 464:	df 93       	push	r29
+	index = index%NUMBER_OF_LEDS;
+ 466:	80 91 08 28 	lds	r24, 0x2808	; 0x802808 <__data_end>
+ 46a:	90 91 09 28 	lds	r25, 0x2809	; 0x802809 <__data_end+0x1>
+ 46e:	6e e1       	ldi	r22, 0x1E	; 30
+ 470:	70 e0       	ldi	r23, 0x00	; 0
+ 472:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 476:	80 93 08 28 	sts	0x2808, r24	; 0x802808 <__data_end>
+ 47a:	90 93 09 28 	sts	0x2809, r25	; 0x802809 <__data_end+0x1>
+ 47e:	c0 e0       	ldi	r28, 0x00	; 0
+ 480:	d0 e0       	ldi	r29, 0x00	; 0
+	for(uint8_t i=0; i<NUMBER_OF_LEDS; i++)
+	{
+		uint8_t r {(i+index)%NUMBER_OF_LEDS};
+		uint8_t g {(i+index+NUMBER_OF_LEDS/3)%NUMBER_OF_LEDS};
+		uint8_t b {(i+index+2*NUMBER_OF_LEDS/3)%NUMBER_OF_LEDS};
+		ledstripe.setColor(i, (255.0*r/NUMBER_OF_LEDS), (255.0*g/NUMBER_OF_LEDS), (255.0*b/NUMBER_OF_LEDS));
+ 482:	0f 2e       	mov	r0, r31
+ 484:	fe e1       	ldi	r31, 0x1E	; 30
+ 486:	ef 2e       	mov	r14, r31
+ 488:	f1 2c       	mov	r15, r1
+ 48a:	f0 2d       	mov	r31, r0
+
+void animationRainbow() { //rainbow
+	index = index%NUMBER_OF_LEDS;
+	for(uint8_t i=0; i<NUMBER_OF_LEDS; i++)
+	{
+		uint8_t r {(i+index)%NUMBER_OF_LEDS};
+ 48c:	c0 90 08 28 	lds	r12, 0x2808	; 0x802808 <__data_end>
+ 490:	d0 90 09 28 	lds	r13, 0x2809	; 0x802809 <__data_end+0x1>
+ 494:	cc 0e       	add	r12, r28
+ 496:	dd 1e       	adc	r13, r29
+		uint8_t g {(i+index+NUMBER_OF_LEDS/3)%NUMBER_OF_LEDS};
+		uint8_t b {(i+index+2*NUMBER_OF_LEDS/3)%NUMBER_OF_LEDS};
+		ledstripe.setColor(i, (255.0*r/NUMBER_OF_LEDS), (255.0*g/NUMBER_OF_LEDS), (255.0*b/NUMBER_OF_LEDS));
+ 498:	c6 01       	movw	r24, r12
+ 49a:	44 96       	adiw	r24, 0x14	; 20
+ 49c:	b7 01       	movw	r22, r14
+ 49e:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 4a2:	bc 01       	movw	r22, r24
+ 4a4:	77 27       	eor	r23, r23
+ 4a6:	07 2e       	mov	r0, r23
+ 4a8:	00 0c       	add	r0, r0
+ 4aa:	88 0b       	sbc	r24, r24
+ 4ac:	99 0b       	sbc	r25, r25
+ 4ae:	0e 94 6f 04 	call	0x8de	; 0x8de <__floatsisf>
+ 4b2:	20 e0       	ldi	r18, 0x00	; 0
+ 4b4:	30 e0       	ldi	r19, 0x00	; 0
+ 4b6:	4f e7       	ldi	r20, 0x7F	; 127
+ 4b8:	53 e4       	ldi	r21, 0x43	; 67
+ 4ba:	0e 94 fb 04 	call	0x9f6	; 0x9f6 <__mulsf3>
+ 4be:	20 e0       	ldi	r18, 0x00	; 0
+ 4c0:	30 e0       	ldi	r19, 0x00	; 0
+ 4c2:	40 ef       	ldi	r20, 0xF0	; 240
+ 4c4:	51 e4       	ldi	r21, 0x41	; 65
+ 4c6:	0e 94 cc 03 	call	0x798	; 0x798 <__divsf3>
+ 4ca:	0e 94 3e 04 	call	0x87c	; 0x87c <__fixunssfsi>
+ 4ce:	06 2f       	mov	r16, r22
+ 4d0:	c6 01       	movw	r24, r12
+ 4d2:	0a 96       	adiw	r24, 0x0a	; 10
+ 4d4:	b7 01       	movw	r22, r14
+ 4d6:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 4da:	bc 01       	movw	r22, r24
+ 4dc:	77 27       	eor	r23, r23
+ 4de:	07 2e       	mov	r0, r23
+ 4e0:	00 0c       	add	r0, r0
+ 4e2:	88 0b       	sbc	r24, r24
+ 4e4:	99 0b       	sbc	r25, r25
+ 4e6:	0e 94 6f 04 	call	0x8de	; 0x8de <__floatsisf>
+ 4ea:	20 e0       	ldi	r18, 0x00	; 0
+ 4ec:	30 e0       	ldi	r19, 0x00	; 0
+ 4ee:	4f e7       	ldi	r20, 0x7F	; 127
+ 4f0:	53 e4       	ldi	r21, 0x43	; 67
+ 4f2:	0e 94 fb 04 	call	0x9f6	; 0x9f6 <__mulsf3>
+ 4f6:	20 e0       	ldi	r18, 0x00	; 0
+ 4f8:	30 e0       	ldi	r19, 0x00	; 0
+ 4fa:	40 ef       	ldi	r20, 0xF0	; 240
+ 4fc:	51 e4       	ldi	r21, 0x41	; 65
+ 4fe:	0e 94 cc 03 	call	0x798	; 0x798 <__divsf3>
+ 502:	0e 94 3e 04 	call	0x87c	; 0x87c <__fixunssfsi>
+ 506:	16 2f       	mov	r17, r22
+ 508:	c6 01       	movw	r24, r12
+ 50a:	b7 01       	movw	r22, r14
+ 50c:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 510:	bc 01       	movw	r22, r24
+ 512:	77 27       	eor	r23, r23
+ 514:	07 2e       	mov	r0, r23
+ 516:	00 0c       	add	r0, r0
+ 518:	88 0b       	sbc	r24, r24
+ 51a:	99 0b       	sbc	r25, r25
+ 51c:	0e 94 6f 04 	call	0x8de	; 0x8de <__floatsisf>
+ 520:	20 e0       	ldi	r18, 0x00	; 0
+ 522:	30 e0       	ldi	r19, 0x00	; 0
+ 524:	4f e7       	ldi	r20, 0x7F	; 127
+ 526:	53 e4       	ldi	r21, 0x43	; 67
+ 528:	0e 94 fb 04 	call	0x9f6	; 0x9f6 <__mulsf3>
+ 52c:	20 e0       	ldi	r18, 0x00	; 0
+ 52e:	30 e0       	ldi	r19, 0x00	; 0
+ 530:	40 ef       	ldi	r20, 0xF0	; 240
+ 532:	51 e4       	ldi	r21, 0x41	; 65
+ 534:	0e 94 cc 03 	call	0x798	; 0x798 <__divsf3>
+ 538:	0e 94 3e 04 	call	0x87c	; 0x87c <__fixunssfsi>
+ 53c:	46 2f       	mov	r20, r22
+ 53e:	21 2f       	mov	r18, r17
+ 540:	6c 2f       	mov	r22, r28
+ 542:	8a e0       	ldi	r24, 0x0A	; 10
+ 544:	98 e2       	ldi	r25, 0x28	; 40
+ 546:	0e 94 6f 00 	call	0xde	; 0xde <_ZN3Led8setColorEhhhh>
+ 54a:	21 96       	adiw	r28, 0x01	; 1
+	_delay_ms(200);
+}
+
+void animationRainbow() { //rainbow
+	index = index%NUMBER_OF_LEDS;
+	for(uint8_t i=0; i<NUMBER_OF_LEDS; i++)
+ 54c:	ce 31       	cpi	r28, 0x1E	; 30
+ 54e:	d1 05       	cpc	r29, r1
+ 550:	09 f0       	breq	.+2      	; 0x554 <_Z16animationRainbowv+0xfe>
+ 552:	9c cf       	rjmp	.-200    	; 0x48c <_Z16animationRainbowv+0x36>
+ 554:	2f eb       	ldi	r18, 0xBF	; 191
+ 556:	87 e2       	ldi	r24, 0x27	; 39
+ 558:	99 e0       	ldi	r25, 0x09	; 9
+ 55a:	21 50       	subi	r18, 0x01	; 1
+ 55c:	80 40       	sbci	r24, 0x00	; 0
+ 55e:	90 40       	sbci	r25, 0x00	; 0
+ 560:	e1 f7       	brne	.-8      	; 0x55a <_Z16animationRainbowv+0x104>
+ 562:	00 c0       	rjmp	.+0      	; 0x564 <_Z16animationRainbowv+0x10e>
+ 564:	00 00       	nop
+		uint8_t g {(i+index+NUMBER_OF_LEDS/3)%NUMBER_OF_LEDS};
+		uint8_t b {(i+index+2*NUMBER_OF_LEDS/3)%NUMBER_OF_LEDS};
+		ledstripe.setColor(i, (255.0*r/NUMBER_OF_LEDS), (255.0*g/NUMBER_OF_LEDS), (255.0*b/NUMBER_OF_LEDS));
+	}
+	_delay_ms(3000);
+}
+ 566:	df 91       	pop	r29
+ 568:	cf 91       	pop	r28
+ 56a:	1f 91       	pop	r17
+ 56c:	0f 91       	pop	r16
+ 56e:	ff 90       	pop	r15
+ 570:	ef 90       	pop	r14
+ 572:	df 90       	pop	r13
+ 574:	cf 90       	pop	r12
+ 576:	08 95       	ret
+
+00000578 <_Z39animationRandomSwitchBetweenThreeColorsv>:
+
+void animationRandomSwitchBetweenThreeColors() {
+ 578:	0f 93       	push	r16
+ 57a:	cf 93       	push	r28
+ 57c:	df 93       	push	r29
+	ledstripe.setColor(rand()%NUMBER_OF_LEDS,0,200,50);
+ 57e:	0e 94 dc 05 	call	0xbb8	; 0xbb8 <rand>
+ 582:	ce e1       	ldi	r28, 0x1E	; 30
+ 584:	d0 e0       	ldi	r29, 0x00	; 0
+ 586:	be 01       	movw	r22, r28
+ 588:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 58c:	02 e3       	ldi	r16, 0x32	; 50
+ 58e:	28 ec       	ldi	r18, 0xC8	; 200
+ 590:	40 e0       	ldi	r20, 0x00	; 0
+ 592:	68 2f       	mov	r22, r24
+ 594:	8a e0       	ldi	r24, 0x0A	; 10
+ 596:	98 e2       	ldi	r25, 0x28	; 40
+ 598:	0e 94 6f 00 	call	0xde	; 0xde <_ZN3Led8setColorEhhhh>
+	ledstripe.setColor(rand()%NUMBER_OF_LEDS,50,0,200);
+ 59c:	0e 94 dc 05 	call	0xbb8	; 0xbb8 <rand>
+ 5a0:	be 01       	movw	r22, r28
+ 5a2:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 5a6:	08 ec       	ldi	r16, 0xC8	; 200
+ 5a8:	20 e0       	ldi	r18, 0x00	; 0
+ 5aa:	42 e3       	ldi	r20, 0x32	; 50
+ 5ac:	68 2f       	mov	r22, r24
+ 5ae:	8a e0       	ldi	r24, 0x0A	; 10
+ 5b0:	98 e2       	ldi	r25, 0x28	; 40
+ 5b2:	0e 94 6f 00 	call	0xde	; 0xde <_ZN3Led8setColorEhhhh>
+	ledstripe.setColor(rand()%NUMBER_OF_LEDS,200,50,0);
+ 5b6:	0e 94 dc 05 	call	0xbb8	; 0xbb8 <rand>
+ 5ba:	be 01       	movw	r22, r28
+ 5bc:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 5c0:	00 e0       	ldi	r16, 0x00	; 0
+ 5c2:	22 e3       	ldi	r18, 0x32	; 50
+ 5c4:	48 ec       	ldi	r20, 0xC8	; 200
+ 5c6:	68 2f       	mov	r22, r24
+ 5c8:	8a e0       	ldi	r24, 0x0A	; 10
+ 5ca:	98 e2       	ldi	r25, 0x28	; 40
+ 5cc:	0e 94 6f 00 	call	0xde	; 0xde <_ZN3Led8setColorEhhhh>
+}
+ 5d0:	df 91       	pop	r29
+ 5d2:	cf 91       	pop	r28
+ 5d4:	0f 91       	pop	r16
+ 5d6:	08 95       	ret
+
+000005d8 <_Z26animationFadeBetweenColorsv>:
+
+void animationFadeBetweenColors() {
+ 5d8:	cf 92       	push	r12
+ 5da:	df 92       	push	r13
+ 5dc:	ff 92       	push	r15
+ 5de:	0f 93       	push	r16
+ 5e0:	1f 93       	push	r17
+ 5e2:	cf 93       	push	r28
+ 5e4:	df 93       	push	r29
+	ledstripe.setColor(rand() % NUMBER_OF_LEDS,0, 200, 50);
+ 5e6:	0e 94 dc 05 	call	0xbb8	; 0xbb8 <rand>
+ 5ea:	6e e1       	ldi	r22, 0x1E	; 30
+ 5ec:	70 e0       	ldi	r23, 0x00	; 0
+ 5ee:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 5f2:	02 e3       	ldi	r16, 0x32	; 50
+ 5f4:	28 ec       	ldi	r18, 0xC8	; 200
+ 5f6:	40 e0       	ldi	r20, 0x00	; 0
+ 5f8:	68 2f       	mov	r22, r24
+ 5fa:	8a e0       	ldi	r24, 0x0A	; 10
+ 5fc:	98 e2       	ldi	r25, 0x28	; 40
+ 5fe:	0e 94 6f 00 	call	0xde	; 0xde <_ZN3Led8setColorEhhhh>
+ 602:	ca e0       	ldi	r28, 0x0A	; 10
+ 604:	d8 e2       	ldi	r29, 0x28	; 40
+	for (uint8_t i = 0; i < NUMBER_OF_LEDS; i++)
+ 606:	f1 2c       	mov	r15, r1
+ 608:	6e 01       	movw	r12, r28
+	{
+		if (ledstripe.getGreen(i)> 10) {
+ 60a:	89 81       	ldd	r24, Y+1	; 0x01
+ 60c:	90 e0       	ldi	r25, 0x00	; 0
+ 60e:	0b 97       	sbiw	r24, 0x0b	; 11
+ 610:	5c f0       	brlt	.+22     	; 0x628 <_Z26animationFadeBetweenColorsv+0x50>
+			ledstripe.setRelativeColor(i,0,-10,0);
+ 612:	00 e0       	ldi	r16, 0x00	; 0
+ 614:	10 e0       	ldi	r17, 0x00	; 0
+ 616:	26 ef       	ldi	r18, 0xF6	; 246
+ 618:	3f ef       	ldi	r19, 0xFF	; 255
+ 61a:	40 e0       	ldi	r20, 0x00	; 0
+ 61c:	50 e0       	ldi	r21, 0x00	; 0
+ 61e:	6f 2d       	mov	r22, r15
+ 620:	8a e0       	ldi	r24, 0x0A	; 10
+ 622:	98 e2       	ldi	r25, 0x28	; 40
+ 624:	0e 94 a8 00 	call	0x150	; 0x150 <_ZN3Led16setRelativeColorEhiii>
+		}
+		if (ledstripe.getRed(i) > 5) {
+ 628:	f6 01       	movw	r30, r12
+ 62a:	80 81       	ld	r24, Z
+ 62c:	90 e0       	ldi	r25, 0x00	; 0
+ 62e:	06 97       	sbiw	r24, 0x06	; 6
+ 630:	5c f0       	brlt	.+22     	; 0x648 <_Z26animationFadeBetweenColorsv+0x70>
+			ledstripe.setRelativeColor(i,0,-5,0);
+ 632:	00 e0       	ldi	r16, 0x00	; 0
+ 634:	10 e0       	ldi	r17, 0x00	; 0
+ 636:	2b ef       	ldi	r18, 0xFB	; 251
+ 638:	3f ef       	ldi	r19, 0xFF	; 255
+ 63a:	40 e0       	ldi	r20, 0x00	; 0
+ 63c:	50 e0       	ldi	r21, 0x00	; 0
+ 63e:	6f 2d       	mov	r22, r15
+ 640:	8a e0       	ldi	r24, 0x0A	; 10
+ 642:	98 e2       	ldi	r25, 0x28	; 40
+ 644:	0e 94 a8 00 	call	0x150	; 0x150 <_ZN3Led16setRelativeColorEhiii>
+	ledstripe.setColor(rand()%NUMBER_OF_LEDS,200,50,0);
+}
+
+void animationFadeBetweenColors() {
+	ledstripe.setColor(rand() % NUMBER_OF_LEDS,0, 200, 50);
+	for (uint8_t i = 0; i < NUMBER_OF_LEDS; i++)
+ 648:	f3 94       	inc	r15
+ 64a:	23 96       	adiw	r28, 0x03	; 3
+ 64c:	fe e1       	ldi	r31, 0x1E	; 30
+ 64e:	ff 12       	cpse	r15, r31
+ 650:	db cf       	rjmp	.-74     	; 0x608 <_Z26animationFadeBetweenColorsv+0x30>
+		if (ledstripe.getRed(i) > 5) {
+			ledstripe.setRelativeColor(i,0,-5,0);
+		}
+	}
+	
+	if (rand()%5 == 1) {
+ 652:	0e 94 dc 05 	call	0xbb8	; 0xbb8 <rand>
+ 656:	65 e0       	ldi	r22, 0x05	; 5
+ 658:	70 e0       	ldi	r23, 0x00	; 0
+ 65a:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 65e:	01 97       	sbiw	r24, 0x01	; 1
+ 660:	71 f4       	brne	.+28     	; 0x67e <_Z26animationFadeBetweenColorsv+0xa6>
+		ledstripe.setColor(rand()%NUMBER_OF_LEDS,200,100,100);
+ 662:	0e 94 dc 05 	call	0xbb8	; 0xbb8 <rand>
+ 666:	6e e1       	ldi	r22, 0x1E	; 30
+ 668:	70 e0       	ldi	r23, 0x00	; 0
+ 66a:	0e 94 68 05 	call	0xad0	; 0xad0 <__divmodhi4>
+ 66e:	04 e6       	ldi	r16, 0x64	; 100
+ 670:	24 e6       	ldi	r18, 0x64	; 100
+ 672:	48 ec       	ldi	r20, 0xC8	; 200
+ 674:	68 2f       	mov	r22, r24
+ 676:	8a e0       	ldi	r24, 0x0A	; 10
+ 678:	98 e2       	ldi	r25, 0x28	; 40
+ 67a:	0e 94 6f 00 	call	0xde	; 0xde <_ZN3Led8setColorEhhhh>
+ 67e:	8f e4       	ldi	r24, 0x4F	; 79
+ 680:	93 ec       	ldi	r25, 0xC3	; 195
+ 682:	01 97       	sbiw	r24, 0x01	; 1
+ 684:	f1 f7       	brne	.-4      	; 0x682 <_Z26animationFadeBetweenColorsv+0xaa>
+ 686:	00 c0       	rjmp	.+0      	; 0x688 <_Z26animationFadeBetweenColorsv+0xb0>
+ 688:	00 00       	nop
+	}
+	_delay_ms(200);
+}
+ 68a:	df 91       	pop	r29
+ 68c:	cf 91       	pop	r28
+ 68e:	1f 91       	pop	r17
+ 690:	0f 91       	pop	r16
+ 692:	ff 90       	pop	r15
+ 694:	df 90       	pop	r13
+ 696:	cf 90       	pop	r12
+ 698:	08 95       	ret
+
+0000069a <update_led_strip>:
+ 69a:	cf 93       	push	r28
+ 69c:	df 93       	push	r29
+ 69e:	fc 01       	movw	r30, r24
+ 6a0:	80 e1       	ldi	r24, 0x10	; 16
+ 6a2:	80 93 01 04 	sts	0x0401, r24	; 0x800401 <__TEXT_REGION_LENGTH__+0x700401>
+ 6a6:	f8 94       	cli
+ 6a8:	9b 01       	movw	r18, r22
+ 6aa:	21 50       	subi	r18, 0x01	; 1
+ 6ac:	31 09       	sbc	r19, r1
+ 6ae:	67 2b       	or	r22, r23
+ 6b0:	09 f4       	brne	.+2      	; 0x6b4 <update_led_strip+0x1a>
+ 6b2:	2b c0       	rjmp	.+86     	; 0x70a <asm_end37+0x8>
+ 6b4:	c0 e0       	ldi	r28, 0x00	; 0
+ 6b6:	d4 e0       	ldi	r29, 0x04	; 4
+ 6b8:	01 90       	ld	r0, Z+
+ 6ba:	00 80       	ld	r0, Z
+ 6bc:	07 d0       	rcall	.+14     	; 0x6cc <send_byte37>
+ 6be:	02 90       	ld	r0, -Z
+ 6c0:	05 d0       	rcall	.+10     	; 0x6cc <send_byte37>
+ 6c2:	01 90       	ld	r0, Z+
+ 6c4:	01 90       	ld	r0, Z+
+ 6c6:	01 90       	ld	r0, Z+
+ 6c8:	01 d0       	rcall	.+2      	; 0x6cc <send_byte37>
+ 6ca:	1b c0       	rjmp	.+54     	; 0x702 <asm_end37>
+
+000006cc <send_byte37>:
+ 6cc:	08 d0       	rcall	.+16     	; 0x6de <send_bit37>
+ 6ce:	07 d0       	rcall	.+14     	; 0x6de <send_bit37>
+ 6d0:	06 d0       	rcall	.+12     	; 0x6de <send_bit37>
+ 6d2:	05 d0       	rcall	.+10     	; 0x6de <send_bit37>
+ 6d4:	04 d0       	rcall	.+8      	; 0x6de <send_bit37>
+ 6d6:	03 d0       	rcall	.+6      	; 0x6de <send_bit37>
+ 6d8:	02 d0       	rcall	.+4      	; 0x6de <send_bit37>
+ 6da:	01 d0       	rcall	.+2      	; 0x6de <send_bit37>
+ 6dc:	08 95       	ret
+
+000006de <send_bit37>:
+ 6de:	8d 83       	std	Y+5, r24	; 0x05
+ 6e0:	00 1c       	adc	r0, r0
+	...
+ 6ea:	08 f0       	brcs	.+2      	; 0x6ee <send_bit37+0x10>
+ 6ec:	8e 83       	std	Y+6, r24	; 0x06
+	...
+ 6fa:	00 00       	nop
+ 6fc:	08 f4       	brcc	.+2      	; 0x700 <send_bit37+0x22>
+ 6fe:	8e 83       	std	Y+6, r24	; 0x06
+ 700:	08 95       	ret
+
+00000702 <asm_end37>:
+ 702:	21 50       	subi	r18, 0x01	; 1
+ 704:	31 09       	sbc	r19, r1
+ 706:	08 f0       	brcs	.+2      	; 0x70a <asm_end37+0x8>
+ 708:	d7 cf       	rjmp	.-82     	; 0x6b8 <update_led_strip+0x1e>
+ 70a:	78 94       	sei
+ 70c:	8f e8       	ldi	r24, 0x8F	; 143
+ 70e:	91 e0       	ldi	r25, 0x01	; 1
+ 710:	01 97       	sbiw	r24, 0x01	; 1
+ 712:	f1 f7       	brne	.-4      	; 0x710 <asm_end37+0xe>
+ 714:	00 c0       	rjmp	.+0      	; 0x716 <asm_end37+0x14>
+ 716:	00 00       	nop
+ 718:	df 91       	pop	r29
+ 71a:	cf 91       	pop	r28
+ 71c:	08 95       	ret
+
+0000071e <main>:
+uint8_t intensity{100};
+//_______
+
+int main(void)
+{
+	CCP = CCP_IOREG_gc;
+ 71e:	88 ed       	ldi	r24, 0xD8	; 216
+ 720:	84 bf       	out	0x34, r24	; 52
+	CLKCTRL.MCLKCTRLB = 0;
+ 722:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__TEXT_REGION_LENGTH__+0x700061>
+	
+	while(true) {
+		switch (id)
+ 726:	80 91 05 28 	lds	r24, 0x2805	; 0x802805 <id>
+ 72a:	90 91 06 28 	lds	r25, 0x2806	; 0x802806 <id+0x1>
+ 72e:	82 30       	cpi	r24, 0x02	; 2
+ 730:	91 05       	cpc	r25, r1
+ 732:	99 f0       	breq	.+38     	; 0x75a <main+0x3c>
+ 734:	2c f4       	brge	.+10     	; 0x740 <main+0x22>
+ 736:	00 97       	sbiw	r24, 0x00	; 0
+ 738:	51 f0       	breq	.+20     	; 0x74e <main+0x30>
+ 73a:	01 97       	sbiw	r24, 0x01	; 1
+ 73c:	59 f0       	breq	.+22     	; 0x754 <main+0x36>
+ 73e:	18 c0       	rjmp	.+48     	; 0x770 <main+0x52>
+ 740:	84 30       	cpi	r24, 0x04	; 4
+ 742:	91 05       	cpc	r25, r1
+ 744:	81 f0       	breq	.+32     	; 0x766 <main+0x48>
+ 746:	64 f0       	brlt	.+24     	; 0x760 <main+0x42>
+ 748:	05 97       	sbiw	r24, 0x05	; 5
+ 74a:	81 f0       	breq	.+32     	; 0x76c <main+0x4e>
+ 74c:	11 c0       	rjmp	.+34     	; 0x770 <main+0x52>
+		{
+		case 0:
+			testAnimation();
+ 74e:	0e 94 1f 01 	call	0x23e	; 0x23e <_Z13testAnimationv>
+			break;
+ 752:	0e c0       	rjmp	.+28     	; 0x770 <main+0x52>
+		case 1:
+			animationBlueBlink();
+ 754:	0e 94 80 01 	call	0x300	; 0x300 <_Z18animationBlueBlinkv>
+			break;
+ 758:	0b c0       	rjmp	.+22     	; 0x770 <main+0x52>
+		case 2:
+			animationPulsingBlue();
+ 75a:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <_Z20animationPulsingBluev>
+			break;
+ 75e:	08 c0       	rjmp	.+16     	; 0x770 <main+0x52>
+		case 3:
+			animationRainbow();
+ 760:	0e 94 2b 02 	call	0x456	; 0x456 <_Z16animationRainbowv>
+			break;
+ 764:	05 c0       	rjmp	.+10     	; 0x770 <main+0x52>
+		case 4:
+			animationRandomSwitchBetweenThreeColors();
+ 766:	0e 94 bc 02 	call	0x578	; 0x578 <_Z39animationRandomSwitchBetweenThreeColorsv>
+			break;
+ 76a:	02 c0       	rjmp	.+4      	; 0x770 <main+0x52>
+		case 5:
+			animationFadeBetweenColors();
+ 76c:	0e 94 ec 02 	call	0x5d8	; 0x5d8 <_Z26animationFadeBetweenColorsv>
+			break;
+		}
+		index++;
+ 770:	80 91 08 28 	lds	r24, 0x2808	; 0x802808 <__data_end>
+ 774:	90 91 09 28 	lds	r25, 0x2809	; 0x802809 <__data_end+0x1>
+ 778:	01 96       	adiw	r24, 0x01	; 1
+ 77a:	80 93 08 28 	sts	0x2808, r24	; 0x802808 <__data_end>
+ 77e:	90 93 09 28 	sts	0x2809, r25	; 0x802809 <__data_end+0x1>
+		//update_led_strip(leds, NUMBER_OF_LEDS); //not needed with the class Led
+		ledstripe.uppdate();
+ 782:	8a e0       	ldi	r24, 0x0A	; 10
+ 784:	98 e2       	ldi	r25, 0x28	; 40
+ 786:	0e 94 1a 01 	call	0x234	; 0x234 <_ZN3Led7uppdateEv>
+ 78a:	8f e4       	ldi	r24, 0x4F	; 79
+ 78c:	93 ec       	ldi	r25, 0xC3	; 195
+ 78e:	01 97       	sbiw	r24, 0x01	; 1
+ 790:	f1 f7       	brne	.-4      	; 0x78e <main+0x70>
+ 792:	00 c0       	rjmp	.+0      	; 0x794 <main+0x76>
+ 794:	00 00       	nop
+ 796:	c7 cf       	rjmp	.-114    	; 0x726 <main+0x8>
+
+00000798 <__divsf3>:
+ 798:	0e 94 e0 03 	call	0x7c0	; 0x7c0 <__divsf3x>
+ 79c:	0c 94 c1 04 	jmp	0x982	; 0x982 <__fp_round>
+ 7a0:	0e 94 ba 04 	call	0x974	; 0x974 <__fp_pscB>
+ 7a4:	58 f0       	brcs	.+22     	; 0x7bc <__divsf3+0x24>
+ 7a6:	0e 94 b3 04 	call	0x966	; 0x966 <__fp_pscA>
+ 7aa:	40 f0       	brcs	.+16     	; 0x7bc <__divsf3+0x24>
+ 7ac:	29 f4       	brne	.+10     	; 0x7b8 <__divsf3+0x20>
+ 7ae:	5f 3f       	cpi	r21, 0xFF	; 255
+ 7b0:	29 f0       	breq	.+10     	; 0x7bc <__divsf3+0x24>
+ 7b2:	0c 94 aa 04 	jmp	0x954	; 0x954 <__fp_inf>
+ 7b6:	51 11       	cpse	r21, r1
+ 7b8:	0c 94 f5 04 	jmp	0x9ea	; 0x9ea <__fp_szero>
+ 7bc:	0c 94 b0 04 	jmp	0x960	; 0x960 <__fp_nan>
+
+000007c0 <__divsf3x>:
+ 7c0:	0e 94 d2 04 	call	0x9a4	; 0x9a4 <__fp_split3>
+ 7c4:	68 f3       	brcs	.-38     	; 0x7a0 <__divsf3+0x8>
+
+000007c6 <__divsf3_pse>:
+ 7c6:	99 23       	and	r25, r25
+ 7c8:	b1 f3       	breq	.-20     	; 0x7b6 <__divsf3+0x1e>
+ 7ca:	55 23       	and	r21, r21
+ 7cc:	91 f3       	breq	.-28     	; 0x7b2 <__divsf3+0x1a>
+ 7ce:	95 1b       	sub	r25, r21
+ 7d0:	55 0b       	sbc	r21, r21
+ 7d2:	bb 27       	eor	r27, r27
+ 7d4:	aa 27       	eor	r26, r26
+ 7d6:	62 17       	cp	r22, r18
+ 7d8:	73 07       	cpc	r23, r19
+ 7da:	84 07       	cpc	r24, r20
+ 7dc:	38 f0       	brcs	.+14     	; 0x7ec <__divsf3_pse+0x26>
+ 7de:	9f 5f       	subi	r25, 0xFF	; 255
+ 7e0:	5f 4f       	sbci	r21, 0xFF	; 255
+ 7e2:	22 0f       	add	r18, r18
+ 7e4:	33 1f       	adc	r19, r19
+ 7e6:	44 1f       	adc	r20, r20
+ 7e8:	aa 1f       	adc	r26, r26
+ 7ea:	a9 f3       	breq	.-22     	; 0x7d6 <__divsf3_pse+0x10>
+ 7ec:	35 d0       	rcall	.+106    	; 0x858 <__divsf3_pse+0x92>
+ 7ee:	0e 2e       	mov	r0, r30
+ 7f0:	3a f0       	brmi	.+14     	; 0x800 <__divsf3_pse+0x3a>
+ 7f2:	e0 e8       	ldi	r30, 0x80	; 128
+ 7f4:	32 d0       	rcall	.+100    	; 0x85a <__divsf3_pse+0x94>
+ 7f6:	91 50       	subi	r25, 0x01	; 1
+ 7f8:	50 40       	sbci	r21, 0x00	; 0
+ 7fa:	e6 95       	lsr	r30
+ 7fc:	00 1c       	adc	r0, r0
+ 7fe:	ca f7       	brpl	.-14     	; 0x7f2 <__divsf3_pse+0x2c>
+ 800:	2b d0       	rcall	.+86     	; 0x858 <__divsf3_pse+0x92>
+ 802:	fe 2f       	mov	r31, r30
+ 804:	29 d0       	rcall	.+82     	; 0x858 <__divsf3_pse+0x92>
+ 806:	66 0f       	add	r22, r22
+ 808:	77 1f       	adc	r23, r23
+ 80a:	88 1f       	adc	r24, r24
+ 80c:	bb 1f       	adc	r27, r27
+ 80e:	26 17       	cp	r18, r22
+ 810:	37 07       	cpc	r19, r23
+ 812:	48 07       	cpc	r20, r24
+ 814:	ab 07       	cpc	r26, r27
+ 816:	b0 e8       	ldi	r27, 0x80	; 128
+ 818:	09 f0       	breq	.+2      	; 0x81c <__divsf3_pse+0x56>
+ 81a:	bb 0b       	sbc	r27, r27
+ 81c:	80 2d       	mov	r24, r0
+ 81e:	bf 01       	movw	r22, r30
+ 820:	ff 27       	eor	r31, r31
+ 822:	93 58       	subi	r25, 0x83	; 131
+ 824:	5f 4f       	sbci	r21, 0xFF	; 255
+ 826:	3a f0       	brmi	.+14     	; 0x836 <__divsf3_pse+0x70>
+ 828:	9e 3f       	cpi	r25, 0xFE	; 254
+ 82a:	51 05       	cpc	r21, r1
+ 82c:	78 f0       	brcs	.+30     	; 0x84c <__divsf3_pse+0x86>
+ 82e:	0c 94 aa 04 	jmp	0x954	; 0x954 <__fp_inf>
+ 832:	0c 94 f5 04 	jmp	0x9ea	; 0x9ea <__fp_szero>
+ 836:	5f 3f       	cpi	r21, 0xFF	; 255
+ 838:	e4 f3       	brlt	.-8      	; 0x832 <__divsf3_pse+0x6c>
+ 83a:	98 3e       	cpi	r25, 0xE8	; 232
+ 83c:	d4 f3       	brlt	.-12     	; 0x832 <__divsf3_pse+0x6c>
+ 83e:	86 95       	lsr	r24
+ 840:	77 95       	ror	r23
+ 842:	67 95       	ror	r22
+ 844:	b7 95       	ror	r27
+ 846:	f7 95       	ror	r31
+ 848:	9f 5f       	subi	r25, 0xFF	; 255
+ 84a:	c9 f7       	brne	.-14     	; 0x83e <__divsf3_pse+0x78>
+ 84c:	88 0f       	add	r24, r24
+ 84e:	91 1d       	adc	r25, r1
+ 850:	96 95       	lsr	r25
+ 852:	87 95       	ror	r24
+ 854:	97 f9       	bld	r25, 7
+ 856:	08 95       	ret
+ 858:	e1 e0       	ldi	r30, 0x01	; 1
+ 85a:	66 0f       	add	r22, r22
+ 85c:	77 1f       	adc	r23, r23
+ 85e:	88 1f       	adc	r24, r24
+ 860:	bb 1f       	adc	r27, r27
+ 862:	62 17       	cp	r22, r18
+ 864:	73 07       	cpc	r23, r19
+ 866:	84 07       	cpc	r24, r20
+ 868:	ba 07       	cpc	r27, r26
+ 86a:	20 f0       	brcs	.+8      	; 0x874 <__divsf3_pse+0xae>
+ 86c:	62 1b       	sub	r22, r18
+ 86e:	73 0b       	sbc	r23, r19
+ 870:	84 0b       	sbc	r24, r20
+ 872:	ba 0b       	sbc	r27, r26
+ 874:	ee 1f       	adc	r30, r30
+ 876:	88 f7       	brcc	.-30     	; 0x85a <__divsf3_pse+0x94>
+ 878:	e0 95       	com	r30
+ 87a:	08 95       	ret
+
+0000087c <__fixunssfsi>:
+ 87c:	0e 94 da 04 	call	0x9b4	; 0x9b4 <__fp_splitA>
+ 880:	88 f0       	brcs	.+34     	; 0x8a4 <__fixunssfsi+0x28>
+ 882:	9f 57       	subi	r25, 0x7F	; 127
+ 884:	98 f0       	brcs	.+38     	; 0x8ac <__fixunssfsi+0x30>
+ 886:	b9 2f       	mov	r27, r25
+ 888:	99 27       	eor	r25, r25
+ 88a:	b7 51       	subi	r27, 0x17	; 23
+ 88c:	b0 f0       	brcs	.+44     	; 0x8ba <__fixunssfsi+0x3e>
+ 88e:	e1 f0       	breq	.+56     	; 0x8c8 <__fixunssfsi+0x4c>
+ 890:	66 0f       	add	r22, r22
+ 892:	77 1f       	adc	r23, r23
+ 894:	88 1f       	adc	r24, r24
+ 896:	99 1f       	adc	r25, r25
+ 898:	1a f0       	brmi	.+6      	; 0x8a0 <__fixunssfsi+0x24>
+ 89a:	ba 95       	dec	r27
+ 89c:	c9 f7       	brne	.-14     	; 0x890 <__fixunssfsi+0x14>
+ 89e:	14 c0       	rjmp	.+40     	; 0x8c8 <__fixunssfsi+0x4c>
+ 8a0:	b1 30       	cpi	r27, 0x01	; 1
+ 8a2:	91 f0       	breq	.+36     	; 0x8c8 <__fixunssfsi+0x4c>
+ 8a4:	0e 94 f4 04 	call	0x9e8	; 0x9e8 <__fp_zero>
+ 8a8:	b1 e0       	ldi	r27, 0x01	; 1
+ 8aa:	08 95       	ret
+ 8ac:	0c 94 f4 04 	jmp	0x9e8	; 0x9e8 <__fp_zero>
+ 8b0:	67 2f       	mov	r22, r23
+ 8b2:	78 2f       	mov	r23, r24
+ 8b4:	88 27       	eor	r24, r24
+ 8b6:	b8 5f       	subi	r27, 0xF8	; 248
+ 8b8:	39 f0       	breq	.+14     	; 0x8c8 <__fixunssfsi+0x4c>
+ 8ba:	b9 3f       	cpi	r27, 0xF9	; 249
+ 8bc:	cc f3       	brlt	.-14     	; 0x8b0 <__fixunssfsi+0x34>
+ 8be:	86 95       	lsr	r24
+ 8c0:	77 95       	ror	r23
+ 8c2:	67 95       	ror	r22
+ 8c4:	b3 95       	inc	r27
+ 8c6:	d9 f7       	brne	.-10     	; 0x8be <__fixunssfsi+0x42>
+ 8c8:	3e f4       	brtc	.+14     	; 0x8d8 <__fixunssfsi+0x5c>
+ 8ca:	90 95       	com	r25
+ 8cc:	80 95       	com	r24
+ 8ce:	70 95       	com	r23
+ 8d0:	61 95       	neg	r22
+ 8d2:	7f 4f       	sbci	r23, 0xFF	; 255
+ 8d4:	8f 4f       	sbci	r24, 0xFF	; 255
+ 8d6:	9f 4f       	sbci	r25, 0xFF	; 255
+ 8d8:	08 95       	ret
+
+000008da <__floatunsisf>:
+ 8da:	e8 94       	clt
+ 8dc:	09 c0       	rjmp	.+18     	; 0x8f0 <__floatsisf+0x12>
+
+000008de <__floatsisf>:
+ 8de:	97 fb       	bst	r25, 7
+ 8e0:	3e f4       	brtc	.+14     	; 0x8f0 <__floatsisf+0x12>
+ 8e2:	90 95       	com	r25
+ 8e4:	80 95       	com	r24
+ 8e6:	70 95       	com	r23
+ 8e8:	61 95       	neg	r22
+ 8ea:	7f 4f       	sbci	r23, 0xFF	; 255
+ 8ec:	8f 4f       	sbci	r24, 0xFF	; 255
+ 8ee:	9f 4f       	sbci	r25, 0xFF	; 255
+ 8f0:	99 23       	and	r25, r25
+ 8f2:	a9 f0       	breq	.+42     	; 0x91e <__floatsisf+0x40>
+ 8f4:	f9 2f       	mov	r31, r25
+ 8f6:	96 e9       	ldi	r25, 0x96	; 150
+ 8f8:	bb 27       	eor	r27, r27
+ 8fa:	93 95       	inc	r25
+ 8fc:	f6 95       	lsr	r31
+ 8fe:	87 95       	ror	r24
+ 900:	77 95       	ror	r23
+ 902:	67 95       	ror	r22
+ 904:	b7 95       	ror	r27
+ 906:	f1 11       	cpse	r31, r1
+ 908:	f8 cf       	rjmp	.-16     	; 0x8fa <__floatsisf+0x1c>
+ 90a:	fa f4       	brpl	.+62     	; 0x94a <__floatsisf+0x6c>
+ 90c:	bb 0f       	add	r27, r27
+ 90e:	11 f4       	brne	.+4      	; 0x914 <__floatsisf+0x36>
+ 910:	60 ff       	sbrs	r22, 0
+ 912:	1b c0       	rjmp	.+54     	; 0x94a <__floatsisf+0x6c>
+ 914:	6f 5f       	subi	r22, 0xFF	; 255
+ 916:	7f 4f       	sbci	r23, 0xFF	; 255
+ 918:	8f 4f       	sbci	r24, 0xFF	; 255
+ 91a:	9f 4f       	sbci	r25, 0xFF	; 255
+ 91c:	16 c0       	rjmp	.+44     	; 0x94a <__floatsisf+0x6c>
+ 91e:	88 23       	and	r24, r24
+ 920:	11 f0       	breq	.+4      	; 0x926 <__floatsisf+0x48>
+ 922:	96 e9       	ldi	r25, 0x96	; 150
+ 924:	11 c0       	rjmp	.+34     	; 0x948 <__floatsisf+0x6a>
+ 926:	77 23       	and	r23, r23
+ 928:	21 f0       	breq	.+8      	; 0x932 <__floatsisf+0x54>
+ 92a:	9e e8       	ldi	r25, 0x8E	; 142
+ 92c:	87 2f       	mov	r24, r23
+ 92e:	76 2f       	mov	r23, r22
+ 930:	05 c0       	rjmp	.+10     	; 0x93c <__floatsisf+0x5e>
+ 932:	66 23       	and	r22, r22
+ 934:	71 f0       	breq	.+28     	; 0x952 <__floatsisf+0x74>
+ 936:	96 e8       	ldi	r25, 0x86	; 134
+ 938:	86 2f       	mov	r24, r22
+ 93a:	70 e0       	ldi	r23, 0x00	; 0
+ 93c:	60 e0       	ldi	r22, 0x00	; 0
+ 93e:	2a f0       	brmi	.+10     	; 0x94a <__floatsisf+0x6c>
+ 940:	9a 95       	dec	r25
+ 942:	66 0f       	add	r22, r22
+ 944:	77 1f       	adc	r23, r23
+ 946:	88 1f       	adc	r24, r24
+ 948:	da f7       	brpl	.-10     	; 0x940 <__floatsisf+0x62>
+ 94a:	88 0f       	add	r24, r24
+ 94c:	96 95       	lsr	r25
+ 94e:	87 95       	ror	r24
+ 950:	97 f9       	bld	r25, 7
+ 952:	08 95       	ret
+
+00000954 <__fp_inf>:
+ 954:	97 f9       	bld	r25, 7
+ 956:	9f 67       	ori	r25, 0x7F	; 127
+ 958:	80 e8       	ldi	r24, 0x80	; 128
+ 95a:	70 e0       	ldi	r23, 0x00	; 0
+ 95c:	60 e0       	ldi	r22, 0x00	; 0
+ 95e:	08 95       	ret
+
+00000960 <__fp_nan>:
+ 960:	9f ef       	ldi	r25, 0xFF	; 255
+ 962:	80 ec       	ldi	r24, 0xC0	; 192
+ 964:	08 95       	ret
+
+00000966 <__fp_pscA>:
+ 966:	00 24       	eor	r0, r0
+ 968:	0a 94       	dec	r0
+ 96a:	16 16       	cp	r1, r22
+ 96c:	17 06       	cpc	r1, r23
+ 96e:	18 06       	cpc	r1, r24
+ 970:	09 06       	cpc	r0, r25
+ 972:	08 95       	ret
+
+00000974 <__fp_pscB>:
+ 974:	00 24       	eor	r0, r0
+ 976:	0a 94       	dec	r0
+ 978:	12 16       	cp	r1, r18
+ 97a:	13 06       	cpc	r1, r19
+ 97c:	14 06       	cpc	r1, r20
+ 97e:	05 06       	cpc	r0, r21
+ 980:	08 95       	ret
+
+00000982 <__fp_round>:
+ 982:	09 2e       	mov	r0, r25
+ 984:	03 94       	inc	r0
+ 986:	00 0c       	add	r0, r0
+ 988:	11 f4       	brne	.+4      	; 0x98e <__fp_round+0xc>
+ 98a:	88 23       	and	r24, r24
+ 98c:	52 f0       	brmi	.+20     	; 0x9a2 <__fp_round+0x20>
+ 98e:	bb 0f       	add	r27, r27
+ 990:	40 f4       	brcc	.+16     	; 0x9a2 <__fp_round+0x20>
+ 992:	bf 2b       	or	r27, r31
+ 994:	11 f4       	brne	.+4      	; 0x99a <__fp_round+0x18>
+ 996:	60 ff       	sbrs	r22, 0
+ 998:	04 c0       	rjmp	.+8      	; 0x9a2 <__fp_round+0x20>
+ 99a:	6f 5f       	subi	r22, 0xFF	; 255
+ 99c:	7f 4f       	sbci	r23, 0xFF	; 255
+ 99e:	8f 4f       	sbci	r24, 0xFF	; 255
+ 9a0:	9f 4f       	sbci	r25, 0xFF	; 255
+ 9a2:	08 95       	ret
+
+000009a4 <__fp_split3>:
+ 9a4:	57 fd       	sbrc	r21, 7
+ 9a6:	90 58       	subi	r25, 0x80	; 128
+ 9a8:	44 0f       	add	r20, r20
+ 9aa:	55 1f       	adc	r21, r21
+ 9ac:	59 f0       	breq	.+22     	; 0x9c4 <__fp_splitA+0x10>
+ 9ae:	5f 3f       	cpi	r21, 0xFF	; 255
+ 9b0:	71 f0       	breq	.+28     	; 0x9ce <__fp_splitA+0x1a>
+ 9b2:	47 95       	ror	r20
+
+000009b4 <__fp_splitA>:
+ 9b4:	88 0f       	add	r24, r24
+ 9b6:	97 fb       	bst	r25, 7
+ 9b8:	99 1f       	adc	r25, r25
+ 9ba:	61 f0       	breq	.+24     	; 0x9d4 <__fp_splitA+0x20>
+ 9bc:	9f 3f       	cpi	r25, 0xFF	; 255
+ 9be:	79 f0       	breq	.+30     	; 0x9de <__fp_splitA+0x2a>
+ 9c0:	87 95       	ror	r24
+ 9c2:	08 95       	ret
+ 9c4:	12 16       	cp	r1, r18
+ 9c6:	13 06       	cpc	r1, r19
+ 9c8:	14 06       	cpc	r1, r20
+ 9ca:	55 1f       	adc	r21, r21
+ 9cc:	f2 cf       	rjmp	.-28     	; 0x9b2 <__fp_split3+0xe>
+ 9ce:	46 95       	lsr	r20
+ 9d0:	f1 df       	rcall	.-30     	; 0x9b4 <__fp_splitA>
+ 9d2:	08 c0       	rjmp	.+16     	; 0x9e4 <__fp_splitA+0x30>
+ 9d4:	16 16       	cp	r1, r22
+ 9d6:	17 06       	cpc	r1, r23
+ 9d8:	18 06       	cpc	r1, r24
+ 9da:	99 1f       	adc	r25, r25
+ 9dc:	f1 cf       	rjmp	.-30     	; 0x9c0 <__fp_splitA+0xc>
+ 9de:	86 95       	lsr	r24
+ 9e0:	71 05       	cpc	r23, r1
+ 9e2:	61 05       	cpc	r22, r1
+ 9e4:	08 94       	sec
+ 9e6:	08 95       	ret
+
+000009e8 <__fp_zero>:
+ 9e8:	e8 94       	clt
+
+000009ea <__fp_szero>:
+ 9ea:	bb 27       	eor	r27, r27
+ 9ec:	66 27       	eor	r22, r22
+ 9ee:	77 27       	eor	r23, r23
+ 9f0:	cb 01       	movw	r24, r22
+ 9f2:	97 f9       	bld	r25, 7
+ 9f4:	08 95       	ret
+
+000009f6 <__mulsf3>:
+ 9f6:	0e 94 0e 05 	call	0xa1c	; 0xa1c <__mulsf3x>
+ 9fa:	0c 94 c1 04 	jmp	0x982	; 0x982 <__fp_round>
+ 9fe:	0e 94 b3 04 	call	0x966	; 0x966 <__fp_pscA>
+ a02:	38 f0       	brcs	.+14     	; 0xa12 <__mulsf3+0x1c>
+ a04:	0e 94 ba 04 	call	0x974	; 0x974 <__fp_pscB>
+ a08:	20 f0       	brcs	.+8      	; 0xa12 <__mulsf3+0x1c>
+ a0a:	95 23       	and	r25, r21
+ a0c:	11 f0       	breq	.+4      	; 0xa12 <__mulsf3+0x1c>
+ a0e:	0c 94 aa 04 	jmp	0x954	; 0x954 <__fp_inf>
+ a12:	0c 94 b0 04 	jmp	0x960	; 0x960 <__fp_nan>
+ a16:	11 24       	eor	r1, r1
+ a18:	0c 94 f5 04 	jmp	0x9ea	; 0x9ea <__fp_szero>
+
+00000a1c <__mulsf3x>:
+ a1c:	0e 94 d2 04 	call	0x9a4	; 0x9a4 <__fp_split3>
+ a20:	70 f3       	brcs	.-36     	; 0x9fe <__mulsf3+0x8>
+
+00000a22 <__mulsf3_pse>:
+ a22:	95 9f       	mul	r25, r21
+ a24:	c1 f3       	breq	.-16     	; 0xa16 <__mulsf3+0x20>
+ a26:	95 0f       	add	r25, r21
+ a28:	50 e0       	ldi	r21, 0x00	; 0
+ a2a:	55 1f       	adc	r21, r21
+ a2c:	62 9f       	mul	r22, r18
+ a2e:	f0 01       	movw	r30, r0
+ a30:	72 9f       	mul	r23, r18
+ a32:	bb 27       	eor	r27, r27
+ a34:	f0 0d       	add	r31, r0
+ a36:	b1 1d       	adc	r27, r1
+ a38:	63 9f       	mul	r22, r19
+ a3a:	aa 27       	eor	r26, r26
+ a3c:	f0 0d       	add	r31, r0
+ a3e:	b1 1d       	adc	r27, r1
+ a40:	aa 1f       	adc	r26, r26
+ a42:	64 9f       	mul	r22, r20
+ a44:	66 27       	eor	r22, r22
+ a46:	b0 0d       	add	r27, r0
+ a48:	a1 1d       	adc	r26, r1
+ a4a:	66 1f       	adc	r22, r22
+ a4c:	82 9f       	mul	r24, r18
+ a4e:	22 27       	eor	r18, r18
+ a50:	b0 0d       	add	r27, r0
+ a52:	a1 1d       	adc	r26, r1
+ a54:	62 1f       	adc	r22, r18
+ a56:	73 9f       	mul	r23, r19
+ a58:	b0 0d       	add	r27, r0
+ a5a:	a1 1d       	adc	r26, r1
+ a5c:	62 1f       	adc	r22, r18
+ a5e:	83 9f       	mul	r24, r19
+ a60:	a0 0d       	add	r26, r0
+ a62:	61 1d       	adc	r22, r1
+ a64:	22 1f       	adc	r18, r18
+ a66:	74 9f       	mul	r23, r20
+ a68:	33 27       	eor	r19, r19
+ a6a:	a0 0d       	add	r26, r0
+ a6c:	61 1d       	adc	r22, r1
+ a6e:	23 1f       	adc	r18, r19
+ a70:	84 9f       	mul	r24, r20
+ a72:	60 0d       	add	r22, r0
+ a74:	21 1d       	adc	r18, r1
+ a76:	82 2f       	mov	r24, r18
+ a78:	76 2f       	mov	r23, r22
+ a7a:	6a 2f       	mov	r22, r26
+ a7c:	11 24       	eor	r1, r1
+ a7e:	9f 57       	subi	r25, 0x7F	; 127
+ a80:	50 40       	sbci	r21, 0x00	; 0
+ a82:	9a f0       	brmi	.+38     	; 0xaaa <__mulsf3_pse+0x88>
+ a84:	f1 f0       	breq	.+60     	; 0xac2 <__mulsf3_pse+0xa0>
+ a86:	88 23       	and	r24, r24
+ a88:	4a f0       	brmi	.+18     	; 0xa9c <__mulsf3_pse+0x7a>
+ a8a:	ee 0f       	add	r30, r30
+ a8c:	ff 1f       	adc	r31, r31
+ a8e:	bb 1f       	adc	r27, r27
+ a90:	66 1f       	adc	r22, r22
+ a92:	77 1f       	adc	r23, r23
+ a94:	88 1f       	adc	r24, r24
+ a96:	91 50       	subi	r25, 0x01	; 1
+ a98:	50 40       	sbci	r21, 0x00	; 0
+ a9a:	a9 f7       	brne	.-22     	; 0xa86 <__mulsf3_pse+0x64>
+ a9c:	9e 3f       	cpi	r25, 0xFE	; 254
+ a9e:	51 05       	cpc	r21, r1
+ aa0:	80 f0       	brcs	.+32     	; 0xac2 <__mulsf3_pse+0xa0>
+ aa2:	0c 94 aa 04 	jmp	0x954	; 0x954 <__fp_inf>
+ aa6:	0c 94 f5 04 	jmp	0x9ea	; 0x9ea <__fp_szero>
+ aaa:	5f 3f       	cpi	r21, 0xFF	; 255
+ aac:	e4 f3       	brlt	.-8      	; 0xaa6 <__mulsf3_pse+0x84>
+ aae:	98 3e       	cpi	r25, 0xE8	; 232
+ ab0:	d4 f3       	brlt	.-12     	; 0xaa6 <__mulsf3_pse+0x84>
+ ab2:	86 95       	lsr	r24
+ ab4:	77 95       	ror	r23
+ ab6:	67 95       	ror	r22
+ ab8:	b7 95       	ror	r27
+ aba:	f7 95       	ror	r31
+ abc:	e7 95       	ror	r30
+ abe:	9f 5f       	subi	r25, 0xFF	; 255
+ ac0:	c1 f7       	brne	.-16     	; 0xab2 <__mulsf3_pse+0x90>
+ ac2:	fe 2b       	or	r31, r30
+ ac4:	88 0f       	add	r24, r24
+ ac6:	91 1d       	adc	r25, r1
+ ac8:	96 95       	lsr	r25
+ aca:	87 95       	ror	r24
+ acc:	97 f9       	bld	r25, 7
+ ace:	08 95       	ret
+
+00000ad0 <__divmodhi4>:
+ ad0:	97 fb       	bst	r25, 7
+ ad2:	07 2e       	mov	r0, r23
+ ad4:	16 f4       	brtc	.+4      	; 0xada <__divmodhi4+0xa>
+ ad6:	00 94       	com	r0
+ ad8:	07 d0       	rcall	.+14     	; 0xae8 <__divmodhi4_neg1>
+ ada:	77 fd       	sbrc	r23, 7
+ adc:	09 d0       	rcall	.+18     	; 0xaf0 <__divmodhi4_neg2>
+ ade:	0e 94 7c 05 	call	0xaf8	; 0xaf8 <__udivmodhi4>
+ ae2:	07 fc       	sbrc	r0, 7
+ ae4:	05 d0       	rcall	.+10     	; 0xaf0 <__divmodhi4_neg2>
+ ae6:	3e f4       	brtc	.+14     	; 0xaf6 <__divmodhi4_exit>
+
+00000ae8 <__divmodhi4_neg1>:
+ ae8:	90 95       	com	r25
+ aea:	81 95       	neg	r24
+ aec:	9f 4f       	sbci	r25, 0xFF	; 255
+ aee:	08 95       	ret
+
+00000af0 <__divmodhi4_neg2>:
+ af0:	70 95       	com	r23
+ af2:	61 95       	neg	r22
+ af4:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00000af6 <__divmodhi4_exit>:
+ af6:	08 95       	ret
+
+00000af8 <__udivmodhi4>:
+ af8:	aa 1b       	sub	r26, r26
+ afa:	bb 1b       	sub	r27, r27
+ afc:	51 e1       	ldi	r21, 0x11	; 17
+ afe:	07 c0       	rjmp	.+14     	; 0xb0e <__udivmodhi4_ep>
+
+00000b00 <__udivmodhi4_loop>:
+ b00:	aa 1f       	adc	r26, r26
+ b02:	bb 1f       	adc	r27, r27
+ b04:	a6 17       	cp	r26, r22
+ b06:	b7 07       	cpc	r27, r23
+ b08:	10 f0       	brcs	.+4      	; 0xb0e <__udivmodhi4_ep>
+ b0a:	a6 1b       	sub	r26, r22
+ b0c:	b7 0b       	sbc	r27, r23
+
+00000b0e <__udivmodhi4_ep>:
+ b0e:	88 1f       	adc	r24, r24
+ b10:	99 1f       	adc	r25, r25
+ b12:	5a 95       	dec	r21
+ b14:	a9 f7       	brne	.-22     	; 0xb00 <__udivmodhi4_loop>
+ b16:	80 95       	com	r24
+ b18:	90 95       	com	r25
+ b1a:	bc 01       	movw	r22, r24
+ b1c:	cd 01       	movw	r24, r26
+ b1e:	08 95       	ret
+
+00000b20 <do_rand>:
+ b20:	8f 92       	push	r8
+ b22:	9f 92       	push	r9
+ b24:	af 92       	push	r10
+ b26:	bf 92       	push	r11
+ b28:	cf 92       	push	r12
+ b2a:	df 92       	push	r13
+ b2c:	ef 92       	push	r14
+ b2e:	ff 92       	push	r15
+ b30:	cf 93       	push	r28
+ b32:	df 93       	push	r29
+ b34:	ec 01       	movw	r28, r24
+ b36:	68 81       	ld	r22, Y
+ b38:	79 81       	ldd	r23, Y+1	; 0x01
+ b3a:	8a 81       	ldd	r24, Y+2	; 0x02
+ b3c:	9b 81       	ldd	r25, Y+3	; 0x03
+ b3e:	61 15       	cp	r22, r1
+ b40:	71 05       	cpc	r23, r1
+ b42:	81 05       	cpc	r24, r1
+ b44:	91 05       	cpc	r25, r1
+ b46:	21 f4       	brne	.+8      	; 0xb50 <do_rand+0x30>
+ b48:	64 e2       	ldi	r22, 0x24	; 36
+ b4a:	79 ed       	ldi	r23, 0xD9	; 217
+ b4c:	8b e5       	ldi	r24, 0x5B	; 91
+ b4e:	97 e0       	ldi	r25, 0x07	; 7
+ b50:	2d e1       	ldi	r18, 0x1D	; 29
+ b52:	33 ef       	ldi	r19, 0xF3	; 243
+ b54:	41 e0       	ldi	r20, 0x01	; 1
+ b56:	50 e0       	ldi	r21, 0x00	; 0
+ b58:	0e 94 ec 05 	call	0xbd8	; 0xbd8 <__divmodsi4>
+ b5c:	49 01       	movw	r8, r18
+ b5e:	5a 01       	movw	r10, r20
+ b60:	9b 01       	movw	r18, r22
+ b62:	ac 01       	movw	r20, r24
+ b64:	a7 ea       	ldi	r26, 0xA7	; 167
+ b66:	b1 e4       	ldi	r27, 0x41	; 65
+ b68:	0e 94 0b 06 	call	0xc16	; 0xc16 <__muluhisi3>
+ b6c:	6b 01       	movw	r12, r22
+ b6e:	7c 01       	movw	r14, r24
+ b70:	ac ee       	ldi	r26, 0xEC	; 236
+ b72:	b4 ef       	ldi	r27, 0xF4	; 244
+ b74:	a5 01       	movw	r20, r10
+ b76:	94 01       	movw	r18, r8
+ b78:	0e 94 19 06 	call	0xc32	; 0xc32 <__mulohisi3>
+ b7c:	dc 01       	movw	r26, r24
+ b7e:	cb 01       	movw	r24, r22
+ b80:	8c 0d       	add	r24, r12
+ b82:	9d 1d       	adc	r25, r13
+ b84:	ae 1d       	adc	r26, r14
+ b86:	bf 1d       	adc	r27, r15
+ b88:	b7 ff       	sbrs	r27, 7
+ b8a:	03 c0       	rjmp	.+6      	; 0xb92 <do_rand+0x72>
+ b8c:	01 97       	sbiw	r24, 0x01	; 1
+ b8e:	a1 09       	sbc	r26, r1
+ b90:	b0 48       	sbci	r27, 0x80	; 128
+ b92:	88 83       	st	Y, r24
+ b94:	99 83       	std	Y+1, r25	; 0x01
+ b96:	aa 83       	std	Y+2, r26	; 0x02
+ b98:	bb 83       	std	Y+3, r27	; 0x03
+ b9a:	9f 77       	andi	r25, 0x7F	; 127
+ b9c:	df 91       	pop	r29
+ b9e:	cf 91       	pop	r28
+ ba0:	ff 90       	pop	r15
+ ba2:	ef 90       	pop	r14
+ ba4:	df 90       	pop	r13
+ ba6:	cf 90       	pop	r12
+ ba8:	bf 90       	pop	r11
+ baa:	af 90       	pop	r10
+ bac:	9f 90       	pop	r9
+ bae:	8f 90       	pop	r8
+ bb0:	08 95       	ret
+
+00000bb2 <rand_r>:
+ bb2:	0e 94 90 05 	call	0xb20	; 0xb20 <do_rand>
+ bb6:	08 95       	ret
+
+00000bb8 <rand>:
+ bb8:	80 e0       	ldi	r24, 0x00	; 0
+ bba:	98 e2       	ldi	r25, 0x28	; 40
+ bbc:	0e 94 90 05 	call	0xb20	; 0xb20 <do_rand>
+ bc0:	08 95       	ret
+
+00000bc2 <srand>:
+ bc2:	a0 e0       	ldi	r26, 0x00	; 0
+ bc4:	b0 e0       	ldi	r27, 0x00	; 0
+ bc6:	80 93 00 28 	sts	0x2800, r24	; 0x802800 <__data_start>
+ bca:	90 93 01 28 	sts	0x2801, r25	; 0x802801 <__data_start+0x1>
+ bce:	a0 93 02 28 	sts	0x2802, r26	; 0x802802 <__data_start+0x2>
+ bd2:	b0 93 03 28 	sts	0x2803, r27	; 0x802803 <__data_start+0x3>
+ bd6:	08 95       	ret
+
+00000bd8 <__divmodsi4>:
+ bd8:	05 2e       	mov	r0, r21
+ bda:	97 fb       	bst	r25, 7
+ bdc:	1e f4       	brtc	.+6      	; 0xbe4 <__divmodsi4+0xc>
+ bde:	00 94       	com	r0
+ be0:	0e 94 03 06 	call	0xc06	; 0xc06 <__negsi2>
+ be4:	57 fd       	sbrc	r21, 7
+ be6:	07 d0       	rcall	.+14     	; 0xbf6 <__divmodsi4_neg2>
+ be8:	0e 94 1e 06 	call	0xc3c	; 0xc3c <__udivmodsi4>
+ bec:	07 fc       	sbrc	r0, 7
+ bee:	03 d0       	rcall	.+6      	; 0xbf6 <__divmodsi4_neg2>
+ bf0:	4e f4       	brtc	.+18     	; 0xc04 <__divmodsi4_exit>
+ bf2:	0c 94 03 06 	jmp	0xc06	; 0xc06 <__negsi2>
+
+00000bf6 <__divmodsi4_neg2>:
+ bf6:	50 95       	com	r21
+ bf8:	40 95       	com	r20
+ bfa:	30 95       	com	r19
+ bfc:	21 95       	neg	r18
+ bfe:	3f 4f       	sbci	r19, 0xFF	; 255
+ c00:	4f 4f       	sbci	r20, 0xFF	; 255
+ c02:	5f 4f       	sbci	r21, 0xFF	; 255
+
+00000c04 <__divmodsi4_exit>:
+ c04:	08 95       	ret
+
+00000c06 <__negsi2>:
+ c06:	90 95       	com	r25
+ c08:	80 95       	com	r24
+ c0a:	70 95       	com	r23
+ c0c:	61 95       	neg	r22
+ c0e:	7f 4f       	sbci	r23, 0xFF	; 255
+ c10:	8f 4f       	sbci	r24, 0xFF	; 255
+ c12:	9f 4f       	sbci	r25, 0xFF	; 255
+ c14:	08 95       	ret
+
+00000c16 <__muluhisi3>:
+ c16:	0e 94 40 06 	call	0xc80	; 0xc80 <__umulhisi3>
+ c1a:	a5 9f       	mul	r26, r21
+ c1c:	90 0d       	add	r25, r0
+ c1e:	b4 9f       	mul	r27, r20
+ c20:	90 0d       	add	r25, r0
+ c22:	a4 9f       	mul	r26, r20
+ c24:	80 0d       	add	r24, r0
+ c26:	91 1d       	adc	r25, r1
+ c28:	11 24       	eor	r1, r1
+ c2a:	08 95       	ret
+
+00000c2c <__mulshisi3>:
+ c2c:	b7 ff       	sbrs	r27, 7
+ c2e:	0c 94 0b 06 	jmp	0xc16	; 0xc16 <__muluhisi3>
+
+00000c32 <__mulohisi3>:
+ c32:	0e 94 0b 06 	call	0xc16	; 0xc16 <__muluhisi3>
+ c36:	82 1b       	sub	r24, r18
+ c38:	93 0b       	sbc	r25, r19
+ c3a:	08 95       	ret
+
+00000c3c <__udivmodsi4>:
+ c3c:	a1 e2       	ldi	r26, 0x21	; 33
+ c3e:	1a 2e       	mov	r1, r26
+ c40:	aa 1b       	sub	r26, r26
+ c42:	bb 1b       	sub	r27, r27
+ c44:	fd 01       	movw	r30, r26
+ c46:	0d c0       	rjmp	.+26     	; 0xc62 <__udivmodsi4_ep>
+
+00000c48 <__udivmodsi4_loop>:
+ c48:	aa 1f       	adc	r26, r26
+ c4a:	bb 1f       	adc	r27, r27
+ c4c:	ee 1f       	adc	r30, r30
+ c4e:	ff 1f       	adc	r31, r31
+ c50:	a2 17       	cp	r26, r18
+ c52:	b3 07       	cpc	r27, r19
+ c54:	e4 07       	cpc	r30, r20
+ c56:	f5 07       	cpc	r31, r21
+ c58:	20 f0       	brcs	.+8      	; 0xc62 <__udivmodsi4_ep>
+ c5a:	a2 1b       	sub	r26, r18
+ c5c:	b3 0b       	sbc	r27, r19
+ c5e:	e4 0b       	sbc	r30, r20
+ c60:	f5 0b       	sbc	r31, r21
+
+00000c62 <__udivmodsi4_ep>:
+ c62:	66 1f       	adc	r22, r22
+ c64:	77 1f       	adc	r23, r23
+ c66:	88 1f       	adc	r24, r24
+ c68:	99 1f       	adc	r25, r25
+ c6a:	1a 94       	dec	r1
+ c6c:	69 f7       	brne	.-38     	; 0xc48 <__udivmodsi4_loop>
+ c6e:	60 95       	com	r22
+ c70:	70 95       	com	r23
+ c72:	80 95       	com	r24
+ c74:	90 95       	com	r25
+ c76:	9b 01       	movw	r18, r22
+ c78:	ac 01       	movw	r20, r24
+ c7a:	bd 01       	movw	r22, r26
+ c7c:	cf 01       	movw	r24, r30
+ c7e:	08 95       	ret
+
+00000c80 <__umulhisi3>:
+ c80:	a2 9f       	mul	r26, r18
+ c82:	b0 01       	movw	r22, r0
+ c84:	b3 9f       	mul	r27, r19
+ c86:	c0 01       	movw	r24, r0
+ c88:	a3 9f       	mul	r26, r19
+ c8a:	70 0d       	add	r23, r0
+ c8c:	81 1d       	adc	r24, r1
+ c8e:	11 24       	eor	r1, r1
+ c90:	91 1d       	adc	r25, r1
+ c92:	b2 9f       	mul	r27, r18
+ c94:	70 0d       	add	r23, r0
+ c96:	81 1d       	adc	r24, r1
+ c98:	11 24       	eor	r1, r1
+ c9a:	91 1d       	adc	r25, r1
+ c9c:	08 95       	ret
+
+00000c9e <_exit>:
+ c9e:	f8 94       	cli
+
+00000ca0 <__stop_program>:
+ ca0:	ff cf       	rjmp	.-2      	; 0xca0 <__stop_program>
